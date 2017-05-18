@@ -15,6 +15,7 @@
 		B0A692831ECBD9CD005F8A8D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B0A692811ECBD9CD005F8A8D /* LaunchScreen.storyboard */; };
 		B0A6928B1ECBE15B005F8A8D /* ScheduleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0A6928A1ECBE15B005F8A8D /* ScheduleTableViewCell.swift */; };
 		B0A6928F1ECBE704005F8A8D /* Cal.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0A6928E1ECBE704005F8A8D /* Cal.swift */; };
+		B0A692911ECC0B0F005F8A8D /* Schedule ScrapeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0A692901ECC0B0F005F8A8D /* Schedule ScrapeViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		B0A692841ECBD9CD005F8A8D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B0A6928A1ECBE15B005F8A8D /* ScheduleTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScheduleTableViewCell.swift; sourceTree = "<group>"; };
 		B0A6928E1ECBE704005F8A8D /* Cal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Cal.swift; sourceTree = "<group>"; };
+		B0A692901ECC0B0F005F8A8D /* Schedule ScrapeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Schedule ScrapeViewController.swift"; sourceTree = "<group>"; };
 		BCB1F7999263BF9224F2B920 /* Pods-Partner.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Partner.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Partner/Pods-Partner.debug.xcconfig"; sourceTree = "<group>"; };
 		C57DF57070C75FABF95E26F9 /* Pods_Partner.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Partner.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -87,6 +89,7 @@
 				B0A692751ECBD9CD005F8A8D /* AppDelegate.swift */,
 				B0A692771ECBD9CD005F8A8D /* ViewController.swift */,
 				B0A692791ECBD9CD005F8A8D /* Main.storyboard */,
+				B0A692901ECC0B0F005F8A8D /* Schedule ScrapeViewController.swift */,
 				B0A6927F1ECBD9CD005F8A8D /* Assets.xcassets */,
 				B0A692811ECBD9CD005F8A8D /* LaunchScreen.storyboard */,
 				B0A692841ECBD9CD005F8A8D /* Info.plist */,
@@ -219,6 +222,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B0A692781ECBD9CD005F8A8D /* ViewController.swift in Sources */,
+				B0A692911ECC0B0F005F8A8D /* Schedule ScrapeViewController.swift in Sources */,
 				B0A6928F1ECBE704005F8A8D /* Cal.swift in Sources */,
 				B0A692761ECBD9CD005F8A8D /* AppDelegate.swift in Sources */,
 				B0A6928B1ECBE15B005F8A8D /* ScheduleTableViewCell.swift in Sources */,

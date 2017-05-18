@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16A313a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16A313a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="pro-O6-6Tc">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -9,6 +9,61 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Schedule Scrape View Controller-->
+        <scene sceneID="UOY-y5-SK9">
+            <objects>
+                <viewController id="pro-O6-6Tc" customClass="Schedule_ScrapeViewController" customModule="Partner" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="24Q-am-fOH"/>
+                        <viewControllerLayoutGuide type="bottom" id="07Z-Q5-8h6"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="48x-1w-3eL">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FfA-Ff-th1">
+                                <rect key="frame" x="0.0" y="54" width="375" height="559"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <webView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5ZN-hq-tVJ">
+                                        <rect key="frame" x="0.0" y="-9" width="375" height="577"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="pro-O6-6Tc" id="jLy-2g-VWq"/>
+                                        </connections>
+                                    </webView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HT1-Wy-Qoh">
+                                <rect key="frame" x="0.0" y="623" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <items>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="0TR-Vd-6I8"/>
+                                    <barButtonItem title="Reload" id="bmU-SA-kdF"/>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="Dde-Ot-yNy"/>
+                                    <barButtonItem title="Table Reload" id="YKv-ED-Nd1">
+                                        <connections>
+                                            <segue destination="BYZ-38-t0r" kind="show" id="6hQ-z0-C9Y"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="QGs-C9-1xR"/>
+                                    <barButtonItem title="Clear Saved Data" id="7to-La-Bba"/>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="Kjv-Hx-vAC"/>
+                                </items>
+                            </toolbar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="webView" destination="5ZN-hq-tVJ" id="7cb-B0-919"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MJg-Us-2SV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-359" y="150"/>
+        </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
@@ -31,7 +86,11 @@
                                 <rect key="frame" x="0.0" y="623" width="375" height="44"/>
                                 <items>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="TOJ-SU-jb0"/>
-                                    <barButtonItem title="Reload" id="tSv-R4-1F2"/>
+                                    <barButtonItem title="Reload" id="tSv-R4-1F2">
+                                        <connections>
+                                            <segue destination="pro-O6-6Tc" kind="show" id="Dxp-kq-M4M"/>
+                                        </connections>
+                                    </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="ywj-Qs-5Fv"/>
                                     <barButtonItem title="Table Reload" id="vUq-lf-rvz"/>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="0jX-sV-8Vv"/>
@@ -47,7 +106,7 @@
                                         <rect key="frame" x="0.0" y="28" width="375" height="90"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="SPp-NH-jNF" id="jYL-Mx-Y78">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="89"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="90"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Shift Time" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wan-a7-wvx">
@@ -79,6 +138,8 @@
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="DayNumber" destination="8YI-g5-xf0" id="X9Y-sL-iO8"/>
+                                            <outlet property="shiftStore" destination="UM4-nS-53c" id="GdF-rl-cAH"/>
+                                            <outlet property="shiftTime" destination="wan-a7-wvx" id="Srn-xw-Rvf"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -87,21 +148,6 @@
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="yoc-dM-xPq"/>
                                 </connections>
                             </tableView>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FfA-Ff-th1">
-                                <rect key="frame" x="0.0" y="64" width="375" height="559"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <subviews>
-                                    <webView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5ZN-hq-tVJ">
-                                        <rect key="frame" x="0.0" y="-3" width="375" height="577"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <connections>
-                                            <outlet property="delegate" destination="BYZ-38-t0r" id="vzZ-Bv-kua"/>
-                                        </connections>
-                                    </webView>
-                                </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -120,13 +166,12 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="webView" destination="5ZN-hq-tVJ" id="TGG-W4-IZp"/>
                         <outlet property="webViewContainer" destination="FfA-Ff-th1" id="2rG-a2-Ehh"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="133.59999999999999" y="138.98050974512745"/>
+            <point key="canvasLocation" x="650" y="135"/>
         </scene>
     </scenes>
 </document>
