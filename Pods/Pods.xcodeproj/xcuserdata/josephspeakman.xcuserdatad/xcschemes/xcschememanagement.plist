@@ -24,6 +24,16 @@
 			<key>orderHint</key>
 			<integer>4</integer>
 		</dict>
+		<key>SAConfettiView-SAConfettiView.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>7</integer>
+		</dict>
+		<key>SAConfettiView.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>6</integer>
+		</dict>
 		<key>SCLAlertView.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
@@ -33,6 +43,21 @@
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
 		<key>126BD1C50B032BDA6A1246DBCC792FFB</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>1CB0A08450F54891F79F92769B1F63FC</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>342896B3D16C2E4C33E29269CA25B8F5</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>38C42A3E27F9B5C86C2097127E4306DD</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -57,12 +82,22 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>B44B6E12B6F3E315FD546E04FE71807E</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>B833B74E1046A94DC5305A4E31A81872</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
 		<key>C6BEE7C7E0EA6DFECAC6FC61CCF30D11</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>CABB6194686295AE7C829CDBF50C0404</key>
 		<dict>
 			<key>primary</key>
 			<true/>

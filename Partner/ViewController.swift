@@ -20,6 +20,7 @@ class ViewController: UIViewController , UITableViewDelegate, UITableViewDataSou
     var dateicon = [String!]()
     var datelabel = [String!]()
     
+    
     @IBOutlet weak var tableView: UITableView!
     
     @IBOutlet weak var webViewContainer: UIView!
@@ -86,21 +87,25 @@ class ViewController: UIViewController , UITableViewDelegate, UITableViewDataSou
     }
         }
     func alertTest () {
-        SCLAlertView().showInfo("Important info", subTitle: "You are great")
+    
+        let appearance = SCLAlertView.SCLAppearance(
+            kTitleFont: UIFont(name: "HelveticaNeue", size: 20)!,
+            kTextFont: UIFont(name: "HelveticaNeue", size: 14)!,
+            kButtonFont: UIFont(name: "HelveticaNeue-Bold", size: 14)!,
+    
+            showCloseButton: false
+            
+        )
+        
+        let alertView = SCLAlertView(appearance: appearance)
+        alertView.addButton("YES"){
+            // SEGUE TO LOGIN
+        }
+        alertView.addButton("NO") {
+
+            //CONFETTI MAYBE.
+        }
+        alertView.showWait("Update Schedule?", subTitle: "Are You Sure? This will Erase Schedule Listed. You will be Propted to login again.")
     }
     
-    func downloadSchedule() {
-        let alertController = UIAlertController(title: "Update Schedule?", message: "Are You Sure? This Erase All Content And Pull New Content", preferredStyle: UIAlertControllerStyle.alert)
-        alertController.addAction(UIAlertAction(title: "No", style: .default, handler: { (action) in
-            print("NO")
-            self.dismiss(animated: true, completion: nil)
-            }))
-        alertController.addAction(UIAlertAction(title: "Yes", style: .destructive, handler: { (action) in
-            //segue To WebView
-            
-            self.dismiss(animated: true, completion: nil)
-        }))
-
-        self.present(alertController, animated: true, completion: nil)
-    }
  }
