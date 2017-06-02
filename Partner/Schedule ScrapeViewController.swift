@@ -72,6 +72,7 @@ class Schedule_ScrapeViewController: UIViewController {
                         //monday0 shift time
                         if let doc = HTML(html: html!, encoding: .utf8) {
                             for link in doc.xpath("//*[@id=\"Week0\"]/div[1]/div[2]/div[2]/div/div[2]") {
+
                                 UserDefaults.standard.set(link.text, forKey: "monday0time")
                 
                                 let monday0Object = UserDefaults.standard.object(forKey: "monday0time")
@@ -930,7 +931,7 @@ class Schedule_ScrapeViewController: UIViewController {
                             }
                             
                         }
-                        
+                    
                     }
                     
                 })

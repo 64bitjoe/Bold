@@ -9,6 +9,8 @@ target 'Partner' do
 
   # Pods for Partner
   pod 'Kanna'
+  pod 'PullToRefresher', '~> 2.0'
+  pod 'SCLAlertView'
   pod 'ConfettiView'
 
 end
