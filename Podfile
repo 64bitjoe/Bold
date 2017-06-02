@@ -11,6 +11,6 @@ target 'Partner' do
   pod 'Kanna'
   pod 'PullToRefresher', '~> 2.0'
   pod 'SCLAlertView'
-  pod "SAConfettiView"
+
 
 end

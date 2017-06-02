@@ -12,6 +12,7 @@ import PullToRefresh
 import SCLAlertView
 
 class ViewController: UIViewController , UITableViewDelegate, UITableViewDataSource{
+    // CONTSTANTS
     let refresher = PullToRefresh()
     var dateFormatter = DateFormatter()
     var storenumber = [String!]()
@@ -20,13 +21,19 @@ class ViewController: UIViewController , UITableViewDelegate, UITableViewDataSou
     var dateicon = [String!]()
     var datelabel = [String!]()
     
-    
+    //IMPORTS
     @IBOutlet weak var tableView: UITableView!
     
-    @IBOutlet weak var webViewContainer: UIView!
-    @IBOutlet weak var webView: UIWebView!
-    
+    //ON VIEW FIRST LOAD
     override func viewDidLoad() {
+        let launchedBefore = UserDefaults.standard.bool(forKey: "launchedBefore")
+        if launchedBefore  {
+            print("Not first launch.")
+        } else {
+            let vc = self.storyboard?.instantiateViewController(withIdentifier: "LoginViewController")
+            self.present(vc!, animated: true, completion: nil)
+            UserDefaults.standard.set(true, forKey: "launchedBefore")
+        }
          super.viewDidLoad()
         let defaults = UserDefaults.standard
         datelabel = [defaults.string(forKey: "monday0date"), defaults.string(forKey: "tues0date"), defaults.string(forKey: "wed0date"), defaults.string(forKey: "thur0date"), defaults.string(forKey: "fri0date"), defaults.string(forKey: "sat0date"), defaults.string(forKey: "sun0date") ]
@@ -53,6 +60,7 @@ class ViewController: UIViewController , UITableViewDelegate, UITableViewDataSou
          
             self.alertTest()
         }
+        
         let cell = tableView.dequeueReusableCell(withIdentifier: "layout", for: indexPath) as! ScheduleTableViewCell
         let row = indexPath.row
         cell.shiftStore.text = storenumber[row]
@@ -100,10 +108,11 @@ class ViewController: UIViewController , UITableViewDelegate, UITableViewDataSou
         let alertView = SCLAlertView(appearance: appearance)
         alertView.addButton("YES"){
             // SEGUE TO LOGIN
+  //          self.presentViewController(LoginViewController, animated: true, completion: nil)
+            let vc = self.storyboard?.instantiateViewController(withIdentifier: "LoginViewController")
+            self.present(vc!, animated: true, completion: nil)
         }
         alertView.addButton("NO") {
-
-            //CONFETTI MAYBE.
         }
         alertView.showWait("Update Schedule?", subTitle: "Are You Sure? This will Erase Schedule Listed. You will be Propted to login again.")
     }

@@ -1,21 +1,18 @@
 PODS:
   - Kanna (2.1.1)
   - PullToRefresher (2.0.2)
-  - SAConfettiView (0.1.8)
   - SCLAlertView (0.7.0)
 
 DEPENDENCIES:
   - Kanna
   - PullToRefresher (~> 2.0)
-  - SAConfettiView
   - SCLAlertView
 
 SPEC CHECKSUMS:
   Kanna: 9b4b086c218703f2b94f5b21a466217dd2f9332e
   PullToRefresher: 5e101a8c3523e67ee0291375ba932ef59e0853c2
-  SAConfettiView: c87031a2280659261b730fce3669fb10e73636ee
   SCLAlertView: 8a14ffc40590c619e183eed2298b854385f30be1
 
-PODFILE CHECKSUM: 550c2791427aa4440decef8bf4dbe6dedeeff1f2
+PODFILE CHECKSUM: 253799d9025ef66ca7abd6ecbbb704b76d53ce58
 
 COCOAPODS: 1.2.0

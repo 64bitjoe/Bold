@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16A313a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="pro-O6-6Tc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16A313a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -22,36 +22,44 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FfA-Ff-th1">
-                                <rect key="frame" x="0.0" y="54" width="375" height="559"/>
+                            <webView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5ZN-hq-tVJ">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="622"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <subviews>
-                                    <webView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5ZN-hq-tVJ">
-                                        <rect key="frame" x="0.0" y="-9" width="375" height="577"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <connections>
-                                            <outlet property="delegate" destination="pro-O6-6Tc" id="jLy-2g-VWq"/>
-                                        </connections>
-                                    </webView>
-                                </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            </view>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <outlet property="delegate" destination="pro-O6-6Tc" id="jLy-2g-VWq"/>
+                                </connections>
+                            </webView>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HT1-Wy-Qoh">
                                 <rect key="frame" x="0.0" y="623" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <items>
-                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="0TR-Vd-6I8"/>
-                                    <barButtonItem title="Reload" id="bmU-SA-kdF"/>
-                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="Dde-Ot-yNy"/>
-                                    <barButtonItem title="Table Reload" id="YKv-ED-Nd1">
+                                    <barButtonItem title="🔄" id="bmU-SA-kdF">
+                                        <color key="tintColor" red="0.10693681989999999" green="0.38742995260000002" blue="0.2381541133" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <connections>
-                                            <segue destination="BYZ-38-t0r" kind="show" id="6hQ-z0-C9Y"/>
+                                            <action selector="reload" destination="5ZN-hq-tVJ" id="2WG-4v-CZO"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="0TR-Vd-6I8"/>
+                                    <barButtonItem title="⬅️" id="7to-La-Bba">
+                                        <color key="tintColor" red="0.10693681989999999" green="0.38742995260000002" blue="0.2381541133" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <connections>
+                                            <action selector="goBack" destination="5ZN-hq-tVJ" id="cEd-mB-E4l"/>
                                         </connections>
                                     </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="QGs-C9-1xR"/>
-                                    <barButtonItem title="Clear Saved Data" id="7to-La-Bba"/>
+                                    <barButtonItem title="➡️" id="KWI-wg-iS8">
+                                        <connections>
+                                            <action selector="goForward" destination="5ZN-hq-tVJ" id="Q9w-uO-2p4"/>
+                                        </connections>
+                                    </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="Kjv-Hx-vAC"/>
+                                    <barButtonItem title="⏹" style="plain" id="YKv-ED-Nd1">
+                                        <color key="tintColor" red="0.10693681989999999" green="0.38742995260000002" blue="0.2381541133" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <connections>
+                                            <action selector="stopLoading" destination="5ZN-hq-tVJ" id="7Wb-2o-c6l"/>
+                                        </connections>
+                                    </barButtonItem>
                                 </items>
                             </toolbar>
                         </subviews>
@@ -63,7 +71,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MJg-Us-2SV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-359" y="150"/>
+            <point key="canvasLocation" x="1445.5999999999999" y="133.5832083958021"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -77,41 +85,27 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background" translatesAutoresizingMaskIntoConstraints="NO" id="dLY-4u-hl8">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Nmv-9G-5pq">
                                 <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                                 <items>
                                     <navigationItem title="My Schedule" id="5Xl-wc-ygy"/>
                                 </items>
                             </navigationBar>
-                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Efc-Wy-IaX">
-                                <rect key="frame" x="0.0" y="623" width="375" height="44"/>
-                                <items>
-                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="TOJ-SU-jb0"/>
-                                    <barButtonItem title="Reload" id="tSv-R4-1F2">
-                                        <connections>
-                                            <segue destination="pro-O6-6Tc" kind="show" id="Dxp-kq-M4M"/>
-                                        </connections>
-                                    </barButtonItem>
-                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="ywj-Qs-5Fv"/>
-                                    <barButtonItem title="Table Reload" id="vUq-lf-rvz"/>
-                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="0jX-sV-8Vv"/>
-                                    <barButtonItem title="Clear Saved Data" id="kEC-KQ-bPc">
-                                        <connections>
-                                            <action selector="clearUserDefaults:" destination="BYZ-38-t0r" id="CWv-Vr-pkf"/>
-                                        </connections>
-                                    </barButtonItem>
-                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="zbC-bs-EwV"/>
-                                </items>
-                            </toolbar>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="90" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="6qN-ef-1ST">
-                                <rect key="frame" x="0.0" y="64" width="375" height="559"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" allowsSelection="NO" rowHeight="90" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="6qN-ef-1ST">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="separatorColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <inset key="separatorInset" minX="15" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="layout" rowHeight="90" id="SPp-NH-jNF" customClass="ScheduleTableViewCell" customModule="Partner" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="90"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="SPp-NH-jNF" id="jYL-Mx-Y78">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="90"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="89"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Shift Time" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wan-a7-wvx">
@@ -142,6 +136,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                             <constraints>
                                                 <constraint firstItem="wan-a7-wvx" firstAttribute="leading" secondItem="UM4-nS-53c" secondAttribute="leading" id="EAq-7n-d7s"/>
                                                 <constraint firstItem="8YI-g5-xf0" firstAttribute="centerX" secondItem="X7m-ec-kUP" secondAttribute="centerX" id="Ezp-zN-QqI"/>
@@ -173,29 +168,29 @@
                                 </connections>
                             </tableView>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.97064523672960346" green="1" blue="0.97503050973035044" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="6qN-ef-1ST" firstAttribute="top" secondItem="Nmv-9G-5pq" secondAttribute="bottom" id="5XS-2H-qGw"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Efc-Wy-IaX" secondAttribute="bottom" id="65G-hI-fLE"/>
                             <constraint firstItem="Nmv-9G-5pq" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="LTc-6Q-lpZ"/>
-                            <constraint firstItem="Efc-Wy-IaX" firstAttribute="top" secondItem="6qN-ef-1ST" secondAttribute="bottom" id="Nng-Xi-hjE"/>
                             <constraint firstItem="6qN-ef-1ST" firstAttribute="top" secondItem="Nmv-9G-5pq" secondAttribute="bottom" id="QSC-ax-TRN"/>
+                            <constraint firstItem="dLY-4u-hl8" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="QoX-Ta-NvO"/>
                             <constraint firstItem="6qN-ef-1ST" firstAttribute="trailing" secondItem="Nmv-9G-5pq" secondAttribute="trailing" id="Sin-OP-zEU"/>
+                            <constraint firstItem="6qN-ef-1ST" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="TUV-Bi-dfH"/>
                             <constraint firstItem="Nmv-9G-5pq" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="YJs-Df-K5H"/>
-                            <constraint firstItem="Efc-Wy-IaX" firstAttribute="top" secondItem="6qN-ef-1ST" secondAttribute="bottom" id="d2A-Dr-h3a"/>
-                            <constraint firstAttribute="trailing" secondItem="Efc-Wy-IaX" secondAttribute="trailing" id="fSG-Nw-COY"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="dLY-4u-hl8" secondAttribute="bottom" id="fgg-O9-Ddc"/>
                             <constraint firstAttribute="trailing" secondItem="Nmv-9G-5pq" secondAttribute="trailing" id="hgb-kk-nPc"/>
                             <constraint firstItem="6qN-ef-1ST" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="j3s-tZ-aol"/>
-                            <constraint firstItem="Efc-Wy-IaX" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="uSq-FK-5L0"/>
+                            <constraint firstItem="dLY-4u-hl8" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="oOj-fX-tMl"/>
+                            <constraint firstAttribute="trailing" secondItem="dLY-4u-hl8" secondAttribute="trailing" id="zCU-e7-CCC"/>
                         </constraints>
                     </view>
-                    <connections>
-                        <outlet property="webViewContainer" destination="FfA-Ff-th1" id="2rG-a2-Ehh"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="648.79999999999995" y="134.48275862068968"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Background" width="1242" height="2106"/>
+    </resources>
 </document>

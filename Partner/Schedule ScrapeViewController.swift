@@ -37,38 +37,37 @@ class Schedule_ScrapeViewController: UIViewController {
             
             let url = NSURL(string: mysite!)
             let html  =  webView.stringByEvaluatingJavaScript(from: "document.documentElement.outerHTML")
-            
+            let delayInSeconds = 5.0
+            DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + delayInSeconds) {
+
             if url != nil {
                 let task = URLSession.shared.dataTask(with: url! as URL, completionHandler: { (data, response, error) -> Void in
-                    print(data as Any)
-                    let defaults = UserDefaults.standard
-                    
-                    defaults.removeObject(forKey: "monday0time")
-                    defaults.removeObject(forKey: "monday0store")
-                    defaults.removeObject(forKey: "monday0date")
-                    defaults.removeObject(forKey: "tue0time")
-                    defaults.removeObject(forKey: "tue0store")
-                    defaults.removeObject(forKey: "tue0date")
-                    defaults.removeObject(forKey: "wed0time")
-                    defaults.removeObject(forKey: "wed0store")
-                    defaults.removeObject(forKey: "wed0date")
-                    defaults.removeObject(forKey: "thur0time")
-                    defaults.removeObject(forKey: "thur0store")
-                    defaults.removeObject(forKey: "thur0date")
-                    defaults.removeObject(forKey: "fri0time")
-                    defaults.removeObject(forKey: "fri0store")
-                    defaults.removeObject(forKey: "fri0date")
-                    defaults.removeObject(forKey: "sat0time")
-                    defaults.removeObject(forKey: "sat0store")
-                    defaults.removeObject(forKey: "sat0date")
-                    defaults.removeObject(forKey: "sun0time")
-                    defaults.removeObject(forKey: "sun0date")
-                    defaults.removeObject(forKey: "sun0store")
-                    
                     if error == nil {
-                
-
-
+                        
+                            let defaults = UserDefaults.standard
+                            
+                            defaults.removeObject(forKey: "monday0time")
+                            defaults.removeObject(forKey: "monday0store")
+                            defaults.removeObject(forKey: "monday0date")
+                            defaults.removeObject(forKey: "tue0time")
+                            defaults.removeObject(forKey: "tue0store")
+                            defaults.removeObject(forKey: "tue0date")
+                            defaults.removeObject(forKey: "wed0time")
+                            defaults.removeObject(forKey: "wed0store")
+                            defaults.removeObject(forKey: "wed0date")
+                            defaults.removeObject(forKey: "thur0time")
+                            defaults.removeObject(forKey: "thur0store")
+                            defaults.removeObject(forKey: "thur0date")
+                            defaults.removeObject(forKey: "fri0time")
+                            defaults.removeObject(forKey: "fri0store")
+                            defaults.removeObject(forKey: "fri0date")
+                            defaults.removeObject(forKey: "sat0time")
+                            defaults.removeObject(forKey: "sat0store")
+                            defaults.removeObject(forKey: "sat0date")
+                            defaults.removeObject(forKey: "sun0time")
+                            defaults.removeObject(forKey: "sun0date")
+                            defaults.removeObject(forKey: "sun0store")
+                            
                         //monday0 shift time
                         if let doc = HTML(html: html!, encoding: .utf8) {
                             for link in doc.xpath("//*[@id=\"Week0\"]/div[1]/div[2]/div[2]/div/div[2]") {
@@ -76,7 +75,6 @@ class Schedule_ScrapeViewController: UIViewController {
                                 UserDefaults.standard.set(link.text, forKey: "monday0time")
                 
                                 let monday0Object = UserDefaults.standard.object(forKey: "monday0time")
-                                
                                 if let mondaytime = monday0Object as? String {
                                     print(mondaytime)
                                  
@@ -933,10 +931,15 @@ class Schedule_ScrapeViewController: UIViewController {
                         }
                     
                     }
+                    let vc = self.storyboard?.instantiateViewController(withIdentifier: "View")
+                    self.present(vc!, animated: true, completion: nil)
+
                     
                 })
                 task.resume()
+                }
             }
+            
             
         }else {
             print("NOT SCHEDULE")
