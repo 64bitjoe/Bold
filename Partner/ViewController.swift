@@ -7,7 +7,6 @@
 // , UITableViewDelegate, UITableViewDataSource
 
 import UIKit
-import Kanna
 import PullToRefresh
 import SCLAlertView
 
@@ -36,11 +35,11 @@ class ViewController: UIViewController , UITableViewDelegate, UITableViewDataSou
         }
          super.viewDidLoad()
         let defaults = UserDefaults.standard
-        datelabel = [defaults.string(forKey: "monday0date"), defaults.string(forKey: "tues0date"), defaults.string(forKey: "wed0date"), defaults.string(forKey: "thur0date"), defaults.string(forKey: "fri0date"), defaults.string(forKey: "sat0date"), defaults.string(forKey: "sun0date") ]
-        storenumber = [defaults.string(forKey: "monday0store"), defaults.string(forKey: "tues0store"), defaults.string(forKey: "wed0store"), defaults.string(forKey: "thur0store"), defaults.string(forKey: "fri0store"),  defaults.string(forKey: "sat0store"),  defaults.string(forKey: "sun0store")]
+        datelabel = [defaults.string(forKey: "monday0date"), defaults.string(forKey: "tues0date"), defaults.string(forKey: "wed0date"), defaults.string(forKey: "thur0date"), defaults.string(forKey: "fri0date"), defaults.string(forKey: "sat0date"), defaults.string(forKey: "sun0date"), defaults.string(forKey: "monday1date"), defaults.string(forKey: "tues1date"), defaults.string(forKey: "wed1date"), defaults.string(forKey: "thur1date"), defaults.string(forKey: "fri1date"), defaults.string(forKey: "sat1date"), defaults.string(forKey: "sun1date") ]
+        storenumber = [defaults.string(forKey: "monday0store"), defaults.string(forKey: "tues0store"), defaults.string(forKey: "wed0store"), defaults.string(forKey: "thur0store"), defaults.string(forKey: "fri0store"),  defaults.string(forKey: "sat0store"),  defaults.string(forKey: "sun0store"), defaults.string(forKey: "monday1store"), defaults.string(forKey: "tues1store"), defaults.string(forKey: "wed1store"), defaults.string(forKey: "thur1store"), defaults.string(forKey: "fri1store"),  defaults.string(forKey: "sat1store"),  defaults.string(forKey: "sun1store")]
 
-        shifttime = [defaults.string(forKey: "monday0time"), defaults.string(forKey: "tues0time"), defaults.string(forKey: "wed0time"), defaults.string(forKey: "thur0time"), defaults.string(forKey: "fri0time"), defaults.string(forKey: "sat0time"),  defaults.string(forKey: "sun0time")]
-        dateicon = ["MONDAY" , "TUESDAY", "WEDNESDAY" , "THURSDAY", "FRIDAY" , "SATURDAY","SUNDAY"]
+        shifttime = [defaults.string(forKey: "monday0time"), defaults.string(forKey: "tues0time"), defaults.string(forKey: "wed0time"), defaults.string(forKey: "thur0time"), defaults.string(forKey: "fri0time"), defaults.string(forKey: "sat0time"),  defaults.string(forKey: "sun0time"), defaults.string(forKey: "monday1time"), defaults.string(forKey: "tues1time"), defaults.string(forKey: "wed1time"), defaults.string(forKey: "thur1time"), defaults.string(forKey: "fri1time"), defaults.string(forKey: "sat1time"),  defaults.string(forKey: "sun1time")]
+        dateicon = ["MONDAY" , "TUESDAY", "WEDNESDAY" , "THURSDAY", "FRIDAY" , "SATURDAY","SUNDAY", "MONDAY" , "TUESDAY", "WEDNESDAY" , "THURSDAY", "FRIDAY" , "SATURDAY","SUNDAY"]
     }
 
 
@@ -51,14 +50,14 @@ class ViewController: UIViewController , UITableViewDelegate, UITableViewDataSou
         return 1
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 7
+        return 14
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         tableView.addPullToRefresh(refresher) {
 
-        //    self.downloadSchedule()
-         
+
             self.alertTest()
+
         }
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "layout", for: indexPath) as! ScheduleTableViewCell
@@ -80,20 +79,8 @@ class ViewController: UIViewController , UITableViewDelegate, UITableViewDataSou
     }
 
 
-    @IBAction func clearUserDefaults(_ sender: Any) {
-    let defaults = UserDefaults.standard
-    defaults.removeObject(forKey: "monday0time")
-    defaults.removeObject(forKey: "tue0time")
-    defaults.removeObject(forKey: "wed0time")
-    defaults.removeObject(forKey: "thur0time")
-    defaults.removeObject(forKey: "fri0time")
-    defaults.removeObject(forKey: "sat0time")
-    defaults.removeObject(forKey: "sun0time")
-    DispatchQueue.main.async {
-    self.tableView.reloadData()
-    
-    }
-        }
+
+    /// UPDATE SCHEDULE ALERT ACTION SHEET
     func alertTest () {
     
         let appearance = SCLAlertView.SCLAppearance(
@@ -107,14 +94,18 @@ class ViewController: UIViewController , UITableViewDelegate, UITableViewDataSou
         
         let alertView = SCLAlertView(appearance: appearance)
         alertView.addButton("YES"){
-            // SEGUE TO LOGIN
-  //          self.presentViewController(LoginViewController, animated: true, completion: nil)
             let vc = self.storyboard?.instantiateViewController(withIdentifier: "LoginViewController")
             self.present(vc!, animated: true, completion: nil)
         }
         alertView.addButton("NO") {
+            print("NOT GOING ANYWHER!")
+            
         }
         alertView.showWait("Update Schedule?", subTitle: "Are You Sure? This will Erase Schedule Listed. You will be Propted to login again.")
+    }
+    @IBAction func goHome(_ sender: Any) {
+        let vc = self.storyboard?.instantiateViewController(withIdentifier: "Home")
+        self.present(vc!, animated: true, completion: nil)
     }
     
  }

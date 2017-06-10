@@ -12,9 +12,11 @@ import Kanna
 
 class Schedule_ScrapeViewController: UIViewController {
         @IBOutlet weak var webView: UIWebView!
-
+//        @IBOutlet weak var loadingView: UIView!
+    
     let mysite = String("https://mysite.starbucks.com/MySchedule/Schedule.aspx")
     override func viewDidLoad() {
+//        self.loadingView.isHidden = true
         super.viewDidLoad()
         // webView suff
         let url = URL(string: mysite!)
@@ -37,49 +39,67 @@ class Schedule_ScrapeViewController: UIViewController {
             
             let url = NSURL(string: mysite!)
             let html  =  webView.stringByEvaluatingJavaScript(from: "document.documentElement.outerHTML")
-            let delayInSeconds = 5.0
+            let delayInSeconds = 4.0
             DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + delayInSeconds) {
 
+                
             if url != nil {
                 let task = URLSession.shared.dataTask(with: url! as URL, completionHandler: { (data, response, error) -> Void in
                     if error == nil {
-                        
+//                        self.loadingView.isHidden = false
                             let defaults = UserDefaults.standard
                             
-                            defaults.removeObject(forKey: "monday0time")
-                            defaults.removeObject(forKey: "monday0store")
-                            defaults.removeObject(forKey: "monday0date")
-                            defaults.removeObject(forKey: "tue0time")
-                            defaults.removeObject(forKey: "tue0store")
-                            defaults.removeObject(forKey: "tue0date")
-                            defaults.removeObject(forKey: "wed0time")
-                            defaults.removeObject(forKey: "wed0store")
-                            defaults.removeObject(forKey: "wed0date")
-                            defaults.removeObject(forKey: "thur0time")
-                            defaults.removeObject(forKey: "thur0store")
-                            defaults.removeObject(forKey: "thur0date")
-                            defaults.removeObject(forKey: "fri0time")
-                            defaults.removeObject(forKey: "fri0store")
-                            defaults.removeObject(forKey: "fri0date")
-                            defaults.removeObject(forKey: "sat0time")
-                            defaults.removeObject(forKey: "sat0store")
-                            defaults.removeObject(forKey: "sat0date")
-                            defaults.removeObject(forKey: "sun0time")
-                            defaults.removeObject(forKey: "sun0date")
-                            defaults.removeObject(forKey: "sun0store")
-                            
+                        defaults.removeObject(forKey: "monday0time")
+                        defaults.removeObject(forKey: "monday0store")
+                        defaults.removeObject(forKey: "monday0date")
+                        defaults.removeObject(forKey: "tue0time")
+                        defaults.removeObject(forKey: "tue0store")
+                        defaults.removeObject(forKey: "tue0date")
+                        defaults.removeObject(forKey: "wed0time")
+                        defaults.removeObject(forKey: "wed0store")
+                        defaults.removeObject(forKey: "wed0date")
+                        defaults.removeObject(forKey: "thur0time")
+                        defaults.removeObject(forKey: "thur0store")
+                        defaults.removeObject(forKey: "thur0date")
+                        defaults.removeObject(forKey: "fri0time")
+                        defaults.removeObject(forKey: "fri0store")
+                        defaults.removeObject(forKey: "fri0date")
+                        defaults.removeObject(forKey: "sat0time")
+                        defaults.removeObject(forKey: "sat0store")
+                        defaults.removeObject(forKey: "sat0date")
+                        defaults.removeObject(forKey: "sun0time")
+                        defaults.removeObject(forKey: "sun0date")
+                        defaults.removeObject(forKey: "sun0store")
+                        
+                        // WK1
+                        defaults.removeObject(forKey: "monday1time")
+                        defaults.removeObject(forKey: "monday1store")
+                        defaults.removeObject(forKey: "monday1date")
+                        defaults.removeObject(forKey: "tue1time")
+                        defaults.removeObject(forKey: "tue1store")
+                        defaults.removeObject(forKey: "tue1date")
+                        defaults.removeObject(forKey: "wed1time")
+                        defaults.removeObject(forKey: "wed1store")
+                        defaults.removeObject(forKey: "wed1date")
+                        defaults.removeObject(forKey: "thur1time")
+                        defaults.removeObject(forKey: "thur1store")
+                        defaults.removeObject(forKey: "thur1date")
+                        defaults.removeObject(forKey: "fri1time")
+                        defaults.removeObject(forKey: "fri1store")
+                        defaults.removeObject(forKey: "fri1date")
+                        defaults.removeObject(forKey: "sat1time")
+                        defaults.removeObject(forKey: "sat1store")
+                        defaults.removeObject(forKey: "sat1date")
+                        defaults.removeObject(forKey: "sun1time")
+                        defaults.removeObject(forKey: "sun1date")
+                        defaults.removeObject(forKey: "sun1store")
+                        
                         //monday0 shift time
                         if let doc = HTML(html: html!, encoding: .utf8) {
                             for link in doc.xpath("//*[@id=\"Week0\"]/div[1]/div[2]/div[2]/div/div[2]") {
 
+                                print(link.text!)
                                 UserDefaults.standard.set(link.text, forKey: "monday0time")
-                
-                                let monday0Object = UserDefaults.standard.object(forKey: "monday0time")
-                                if let mondaytime = monday0Object as? String {
-                                    print(mondaytime)
-                                 
-                                    
-                                }
                                 
                             }
                             
@@ -90,7 +110,6 @@ class Schedule_ScrapeViewController: UIViewController {
                         if let doc = HTML(html: html!, encoding: .utf8){
                             for link in doc.xpath("//*[@id=\"Week0\"]/div[1]/div[2]/div[2]/div[2]") {
                                 print(link.text!)
-                                
                                 UserDefaults.standard.set(link.text, forKey: "monday0time")
                                 UserDefaults.standard.set(link.text, forKey: "monday0store")
                             }
@@ -101,17 +120,9 @@ class Schedule_ScrapeViewController: UIViewController {
                         //monday0 store
                         if let doc = HTML(html: html!, encoding: .utf8) {
                             for link in doc.xpath("//*[@id=\"Week0\"]/div[1]/div[2]/div[2]/div/div[1]") {
-                                UserDefaults.standard.removeObject(forKey: "monday0store")
-                                UserDefaults.standard.set(link.text ?? "UNKNOWN DATA", forKey: "monday0store")
+                                print(link.text!)
+                                UserDefaults.standard.set(link.text , forKey: "monday0store")
             
-                                let monday0storeObject = UserDefaults.standard.object(forKey: "monday0store")
-                                
-                                
-                                if let mondaystore = monday0storeObject as? String {
-                                    print(mondaystore)
-                                    
-                                    
-                                }
                                 
                             }
                             
@@ -119,36 +130,18 @@ class Schedule_ScrapeViewController: UIViewController {
                         //monday0 date
                         if let doc = HTML(html: html!, encoding: .utf8) {
                             for link in doc.xpath("//*[@id=\"Week0\"]/div[1]/div[1]") {
-                                UserDefaults.standard.removeObject(forKey: "monday0date")
+                                print(link.text!)
                                 UserDefaults.standard.set(link.text, forKey: "monday0date")
                                 }
-                                let monday0dateObject = UserDefaults.standard.object(forKey: "monday0date")
-                                
-                                if let mondaydate = monday0dateObject as? String {
-                                    print(mondaydate)
-                                    
-                                    
-                        
-                                
-                            }
                             
                         }
                         //--------------------------------------------------------------------------------------------------------------\\
-                        //FIXED ?
                         //tuesday0 shift time
                         if let doc = HTML(html: html!, encoding: .utf8) {
                             
                             for link in doc.xpath("//*[@id=\"Week0\"]/div[2]/div[2]/div[2]/div/div[2]") {
-                                UserDefaults.standard.removeObject(forKey: "tues0time")
                                 UserDefaults.standard.set(link.text, forKey: "tues0time")
-                                let tues0Object = UserDefaults.standard.object(forKey: "tues0time")
-                                
-                                if let tuestime = tues0Object as? String {
-                                    print(tuestime)
-                                    
-                                    
-                                }
-                                
+
                             }
                             
                         }
@@ -156,7 +149,6 @@ class Schedule_ScrapeViewController: UIViewController {
                         
                         if let doc = HTML(html: html!, encoding: .utf8){
                             for link in doc.xpath("//*[@id=\"Week0\"]/div[2]/div[2]/div[2]/div[2]") {
-                                print(link.text!)
                                 UserDefaults.standard.set(link.text, forKey: "tuesday0time")
                                 UserDefaults.standard.set(link.text, forKey: "tuesday0store")
                             }
@@ -165,15 +157,7 @@ class Schedule_ScrapeViewController: UIViewController {
                         //tuesday0 store
                         if let doc = HTML(html: html!, encoding: .utf8) {
                             for link in doc.xpath("//*[@id=\"Week0\"]/div[2]/div[2]/div[2]/div/div[1]") {
-                                UserDefaults.standard.removeObject(forKey: "tues0store")
-                                UserDefaults.standard.set(link.text ?? "UNKNOWN DATA", forKey: "tues0store")
-                                let tues0storeObject = UserDefaults.standard.object(forKey: "tues0store")
-                                
-                                if let tuesstore = tues0storeObject as? String {
-                                    print(tuesstore)
-                                    
-                                    
-                                }
+                                UserDefaults.standard.set(link.text , forKey: "tues0store")
                                 
                             }
                             
@@ -181,7 +165,6 @@ class Schedule_ScrapeViewController: UIViewController {
                         //tuesday0 date
                         if let doc = HTML(html: html!, encoding: .utf8) {
                             for link in doc.xpath("//*[@id=\"Week0\"]/div[2]/div[1]") {
-                                UserDefaults.standard.removeObject(forKey: "tues0date")
                                 UserDefaults.standard.set(link.text, forKey: "tues0date")
                                 let tues0dateObject = UserDefaults.standard.object(forKey: "tues0date")
                                 
@@ -531,6 +514,7 @@ class Schedule_ScrapeViewController: UIViewController {
                             for link in doc.xpath("//*[@id=\"Week1\"]/div[1]/div[2]/div[2]/div[2]") {
                                 print(link.text!)
                                 UserDefaults.standard.set(link.text, forKey: "monday1time")
+                                UserDefaults.standard.set(link.text, forKey: "monday1store")
                             }
                             
                         }
@@ -553,7 +537,7 @@ class Schedule_ScrapeViewController: UIViewController {
                         }
                         //monday1 date
                         if let doc = HTML(html: html!, encoding: .utf8) {
-                            for link in doc.xpath("//*[@id=\"Week1\"]/div[1]/div[2]/div[1]") {
+                            for link in doc.xpath("//*[@id=\"Week1\"]/div[1]/div[1]") {
                                 UserDefaults.standard.removeObject(forKey: "monday1date")
                                 UserDefaults.standard.set(link.text, forKey: "monday1date")
     
@@ -592,6 +576,7 @@ class Schedule_ScrapeViewController: UIViewController {
                             for link in doc.xpath("//*[@id=\"Week1\"]/div[2]/div[2]/div[2]/div[2]") {
                                 print(link.text!)
                                 UserDefaults.standard.set(link.text, forKey: "tues1time")
+                                UserDefaults.standard.set(link.text, forKey: "tues1store")
                             }
                             
                         }
@@ -614,7 +599,7 @@ class Schedule_ScrapeViewController: UIViewController {
                         }
                         //tuesday1 date
                         if let doc = HTML(html: html!, encoding: .utf8) {
-                            for link in doc.xpath("//*[@id=\"Week1\"]/div[2]/div[2]/div[1]") {
+                            for link in doc.xpath("//*[@id=\"Week1\"]/div[2]/div[1]") {
                                 UserDefaults.standard.removeObject(forKey: "tues1date")
                                     UserDefaults.standard.set(link.text, forKey: "tues1date")
  
@@ -653,6 +638,7 @@ class Schedule_ScrapeViewController: UIViewController {
                             for link in doc.xpath("//*[@id=\"Week1\"]/div[3]/div[2]/div[2]/div[2]") {
                                 print(link.text!)
                                 UserDefaults.standard.set(link.text, forKey: "wed1time")
+                                UserDefaults.standard.set(link.text, forKey: "wed1store")
                             }
                             
                         }
@@ -675,9 +661,9 @@ class Schedule_ScrapeViewController: UIViewController {
                         }
                         //wed1 date
                         if let doc = HTML(html: html!, encoding: .utf8) {
-                            for link in doc.xpath("//*[@id=\"Week1\"]/div[3]/div[2]/div[1]") {
+                            for link in doc.xpath("//*[@id=\"Week1\"]/div[3]/div[1]") {
                                 UserDefaults.standard.removeObject(forKey: "wed1date")
-                                UserDefaults.standard.set(link.text, forKey: "wed1store")
+                                UserDefaults.standard.set(link.text, forKey: "wed1date")
 
                                 let wed1dateObject = UserDefaults.standard.object(forKey: "wed1date")
                                 
@@ -713,6 +699,7 @@ class Schedule_ScrapeViewController: UIViewController {
                             for link in doc.xpath("//*[@id=\"Week1\"]/div[4]/div[2]/div[2]/div[2]") {
                                 print(link.text!)
                                 UserDefaults.standard.set(link.text, forKey: "thur1time")
+                                UserDefaults.standard.set(link.text, forKey: "thur1store")
                             }
                             
                         }
@@ -735,9 +722,9 @@ class Schedule_ScrapeViewController: UIViewController {
                         
                         //thur1 date
                         if let doc = HTML(html: html!, encoding: .utf8) {
-                            for link in doc.xpath("//*[@id=\"Week1\"]/div[4]/div[2]/div[1]") {
+                            for link in doc.xpath("//*[@id=\"Week1\"]/div[4]/div[1]") {
                                 UserDefaults.standard.removeObject(forKey: "thur1date")
-                                UserDefaults.standard.set(link.text, forKey: "thur1sdate")
+                                UserDefaults.standard.set(link.text, forKey: "thur1date")
                                 let thurs1dateObject = UserDefaults.standard.object(forKey: "thur1date")
                                 
                                 if let thursdate = thurs1dateObject as? String {
@@ -773,6 +760,7 @@ class Schedule_ScrapeViewController: UIViewController {
                             for link in doc.xpath("//*[@id=\"Week1\"]/div[5]/div[2]/div[2]/div[2]") {
                                 print(link.text!)
                                 UserDefaults.standard.set(link.text, forKey: "fri1time")
+                                UserDefaults.standard.set(link.text, forKey: "fri1store")
                             }
                             
                         }
@@ -795,7 +783,7 @@ class Schedule_ScrapeViewController: UIViewController {
                         }
                         //fri1 date
                         if let doc = HTML(html: html!, encoding: .utf8) {
-                            for link in doc.xpath("//*[@id=\"Week1\"]/div[5]/div[2]/div[1]") {
+                            for link in doc.xpath("//*[@id=\"Week1\"]/div[5]/div[1]") {
                                 UserDefaults.standard.removeObject(forKey: "fri1date")
                                 UserDefaults.standard.set(link.text, forKey: "fri1date")
                 
@@ -834,6 +822,7 @@ class Schedule_ScrapeViewController: UIViewController {
                             for link in doc.xpath("//*[@id=\"Week1\"]/div[6]/div[2]/div[2]/div[2]") {
                                 print(link.text!)
                                 UserDefaults.standard.set(link.text, forKey: "sat1time")
+                                UserDefaults.standard.set(link.text, forKey: "sat1store")
                             }
                             
                         }
@@ -855,7 +844,7 @@ class Schedule_ScrapeViewController: UIViewController {
                         }
                         //sat1 date
                         if let doc = HTML(html: html!, encoding: .utf8) {
-                            for link in doc.xpath("//*[@id=\"Week1\"]/div[6]/div[2]/div[1]") {
+                            for link in doc.xpath("//*[@id=\"Week1\"]/div[6]/div[1]") {
                                 UserDefaults.standard.removeObject(forKey: "sat1date")
                                 UserDefaults.standard.set(link.text, forKey: "sat1date")
                                 let sat1dateObject = UserDefaults.standard.object(forKey: "sat1date")
@@ -892,6 +881,7 @@ class Schedule_ScrapeViewController: UIViewController {
                             for link in doc.xpath("//*[@id=\"Week1\"]/div[7]/div[2]/div[2]/div[2]") {
                                 print(link.text!)
                                 UserDefaults.standard.set(link.text, forKey: "sun1time")
+                                UserDefaults.standard.set(link.text, forKey: "sun1store")
                             }
                             
                         }
@@ -914,7 +904,7 @@ class Schedule_ScrapeViewController: UIViewController {
                         }
                         //sun1 date
                         if let doc = HTML(html: html!, encoding: .utf8) {
-                            for link in doc.xpath("//*[@id=\"Week1\"]/div[7]/div[2]/div[1]") {
+                            for link in doc.xpath("//*[@id=\"Week1\"]/div[7]/div[1]") {
                                 UserDefaults.standard.removeObject(forKey: "sun1date")
                                 UserDefaults.standard.set(link.text, forKey: "sun1date")
                                 
@@ -929,7 +919,7 @@ class Schedule_ScrapeViewController: UIViewController {
                             }
                             
                         }
-                    
+                   
                     }
                     let vc = self.storyboard?.instantiateViewController(withIdentifier: "View")
                     self.present(vc!, animated: true, completion: nil)
