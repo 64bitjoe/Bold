@@ -20,8 +20,8 @@ class HomeScreenControllerViewController: UIViewController , UITableViewDelegate
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        cV.isHidden = true
 
+        cV.isHidden = true
         cellbackground = [#imageLiteral(resourceName: "Schedule"), #imageLiteral(resourceName: "Coffee Passport"), #imageLiteral(resourceName: "Partner Hub") , #imageLiteral(resourceName: "About")]
         actions = ["Shedule", "Coffee Passport", "Partner Hub", "About"]
         // Do any additional setup after loading the view.
@@ -77,8 +77,17 @@ class HomeScreenControllerViewController: UIViewController , UITableViewDelegate
                 
             )
             let alertView = SCLAlertView(appearance: appearance)
-            alertView.showNotice("Soon!", subTitle: "Working on it!")
-            cV.isHidden = false
+            alertView.showNotice("Soon!", subTitle: "Working on it! Have Some Confetti for now <3")
+
+            
+            if cV.isHidden == true {
+                cV.isHidden = false
+                let delayInSeconds = 10.0
+                DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + delayInSeconds) {
+                    self.cV.isHidden = true
+            }
+
+            }
             // let vc = self.storyboard?.instantiateViewController(withIdentifier: "about")
             // self.present(vc!, animated: false, completion: nil)
             

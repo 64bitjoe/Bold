@@ -86,12 +86,12 @@
 
 /* Begin PBXFileReference section */
 		010DFD0433CEC52311F056426639705C /* ConfettiView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConfettiView.swift; path = ConfettiView/Classes/ConfettiView.swift; sourceTree = "<group>"; };
-		055BDAEAD1796306DDC9AA49BEEA897B /* ConfettiView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = ConfettiView.framework; path = ConfettiView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		055BDAEAD1796306DDC9AA49BEEA897B /* ConfettiView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ConfettiView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		10D84E261C7BDFC0AFA8F68F0021EFB9 /* ConfettiView-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "ConfettiView-dummy.m"; sourceTree = "<group>"; };
 		11ACFFE55EF357868A9C1E8C8BB6290B /* SCLExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SCLExtensions.swift; path = SCLAlertView/SCLExtensions.swift; sourceTree = "<group>"; };
 		16F92453F8C28D9E30821E56B538C499 /* SCLAlertView.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SCLAlertView.xcconfig; sourceTree = "<group>"; };
 		18D068EC6A2842E627619FE20F5145AB /* SCLAlertView-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SCLAlertView-umbrella.h"; sourceTree = "<group>"; };
-		1A8D3EE8A1C62F604FD60E888A2C32AB /* SCLAlertView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SCLAlertView.framework; path = SCLAlertView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1A8D3EE8A1C62F604FD60E888A2C32AB /* SCLAlertView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SCLAlertView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1AB04049A5476D02AAEF2EB308918C06 /* PullToRefresher-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "PullToRefresher-prefix.pch"; sourceTree = "<group>"; };
 		1C13E3415ACC14211F8EFED60887FB03 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1C591638DD37C9C8F9591B7DC5B3D7F8 /* DefaultRefreshView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DefaultRefreshView.swift; path = PullToRefresh/DefaultRefreshView.swift; sourceTree = "<group>"; };
@@ -99,7 +99,7 @@
 		29D0FA3CA88BBD8AC4E003A1239DAF59 /* KDLoadingView-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "KDLoadingView-dummy.m"; sourceTree = "<group>"; };
 		2C22283FDE45C47C93377434A25D1601 /* Kanna-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Kanna-dummy.m"; sourceTree = "<group>"; };
 		306537D42E2594C00F605FCD154AC542 /* KDLoadingView-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "KDLoadingView-prefix.pch"; sourceTree = "<group>"; };
-		3433628188A1533FDE41D33D2B4F8453 /* PullToRefresh.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = PullToRefresh.framework; path = PullToRefresher.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3433628188A1533FDE41D33D2B4F8453 /* PullToRefresh.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PullToRefresh.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3537F6CA191168BD338D14B6ED99484E /* Kanna-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Kanna-umbrella.h"; sourceTree = "<group>"; };
 		3C0A07733354DD661F6A410527930EFE /* ShapeView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ShapeView.swift; path = ConfettiView/Classes/ShapeView.swift; sourceTree = "<group>"; };
 		3C58DEB7BDDC34476C5B39B327CE2F1F /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -110,21 +110,21 @@
 		5CAAA7B3AF7273898EC694B5DE97355D /* Pods-Bold-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Bold-resources.sh"; sourceTree = "<group>"; };
 		5DAEDF51F78B372E761FE326B6F33988 /* libxmlHTMLNode.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = libxmlHTMLNode.swift; path = Sources/Kanna/libxmlHTMLNode.swift; sourceTree = "<group>"; };
 		63A7F88AB3D9C99E707F73D48B7FE9C0 /* PullToRefresher-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "PullToRefresher-umbrella.h"; sourceTree = "<group>"; };
-		6507D10DC97B7E86557E022C5DEDE1BD /* Kanna.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = Kanna.modulemap; sourceTree = "<group>"; };
-		6676E797AC1941DD4E96C97A28E69702 /* Pods_Bold.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Bold.framework; path = "Pods-Bold.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6507D10DC97B7E86557E022C5DEDE1BD /* Kanna.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = Kanna.modulemap; sourceTree = "<group>"; };
+		6676E797AC1941DD4E96C97A28E69702 /* Pods_Bold.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Bold.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		672989ABBE55EB84DFB4EB2F046C2715 /* Pods-Bold-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Bold-frameworks.sh"; sourceTree = "<group>"; };
-		6AA7721B1556CEF7B1CCD241C73331E7 /* Pods-Bold.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-Bold.modulemap"; sourceTree = "<group>"; };
+		6AA7721B1556CEF7B1CCD241C73331E7 /* Pods-Bold.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-Bold.modulemap"; sourceTree = "<group>"; };
 		6C69B109A15290019B43953C04602CC8 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6E0EDC25888AB1D5C7058AE56A033C42 /* ConfettiView-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ConfettiView-umbrella.h"; sourceTree = "<group>"; };
 		748889C63BC5FCAD3690EF876172A204 /* PullToRefresher-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "PullToRefresher-dummy.m"; sourceTree = "<group>"; };
 		74A6EFD3BA0FC1CE9631E68991E61B90 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		79D34892C9571D6387FD0A052235CBE8 /* Pods-Bold-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Bold-umbrella.h"; sourceTree = "<group>"; };
-		7DCD50348F27DE5DBBE3966FC01369F8 /* SCLAlertView.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = SCLAlertView.modulemap; sourceTree = "<group>"; };
+		7DCD50348F27DE5DBBE3966FC01369F8 /* SCLAlertView.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = SCLAlertView.modulemap; sourceTree = "<group>"; };
 		7FB282100C85D215ECF94398A1AD4A84 /* Pods-Bold-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Bold-dummy.m"; sourceTree = "<group>"; };
 		84A19CC511B333929A17F0AC41C8CC6F /* KDLoadingView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = KDLoadingView.swift; path = KDLoadingView/KDLoadingView.swift; sourceTree = "<group>"; };
-		8CB6F5028396E9DF786A5B5A9420F033 /* PullToRefresher.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = PullToRefresher.modulemap; sourceTree = "<group>"; };
+		8CB6F5028396E9DF786A5B5A9420F033 /* PullToRefresher.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = PullToRefresher.modulemap; sourceTree = "<group>"; };
 		8D31AA94C74B76619894CC05B8E8E517 /* libxmlHTMLDocument.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = libxmlHTMLDocument.swift; path = Sources/Kanna/libxmlHTMLDocument.swift; sourceTree = "<group>"; };
-		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		9651E80165AEF61FCC07A3BF9AD66699 /* UIScrollView+PullToRefresh.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIScrollView+PullToRefresh.swift"; path = "PullToRefresh/UIScrollView+PullToRefresh.swift"; sourceTree = "<group>"; };
 		9896C3A03549A94B48DBDE4515115DA7 /* ConfettiLayer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConfettiLayer.swift; path = ConfettiView/Classes/ConfettiLayer.swift; sourceTree = "<group>"; };
 		9C523AF910A7E4B0FC0B7ABFA4FD53A5 /* Pods-Bold-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Bold-acknowledgements.plist"; sourceTree = "<group>"; };
@@ -135,21 +135,21 @@
 		C441AA378108D38F16FB554505C4BAD5 /* Pods-Bold-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Bold-acknowledgements.markdown"; sourceTree = "<group>"; };
 		C74AC9D6D61023B26C8C93336C2F5B12 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C8AFC3877D0E96F9291CEEB16816C7AC /* CSS.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CSS.swift; path = Sources/Kanna/CSS.swift; sourceTree = "<group>"; };
-		CA0B46062AF48812867D104084682659 /* ConfettiView.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = ConfettiView.modulemap; sourceTree = "<group>"; };
+		CA0B46062AF48812867D104084682659 /* ConfettiView.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = ConfettiView.modulemap; sourceTree = "<group>"; };
 		CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		D0CF376E3D82A9A8DCEEA2343D54CB41 /* RefreshViewAnimator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RefreshViewAnimator.swift; path = PullToRefresh/RefreshViewAnimator.swift; sourceTree = "<group>"; };
 		D8295BA8C56C4F22BDDD5AA9699A96C4 /* Kanna.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Kanna.h; path = Sources/Kanna/Kanna.h; sourceTree = "<group>"; };
 		DFEEAF1DBE11B3EEF0D965B0FB61A47B /* SCLAlertView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SCLAlertView.swift; path = SCLAlertView/SCLAlertView.swift; sourceTree = "<group>"; };
-		E19F12EB07A3232DB3B92928C0F26CFB /* KDLoadingView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = KDLoadingView.framework; path = KDLoadingView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E19F12EB07A3232DB3B92928C0F26CFB /* KDLoadingView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = KDLoadingView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E3BFB53842C2E028EA72BD836E715E55 /* KDLoadingView-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "KDLoadingView-umbrella.h"; sourceTree = "<group>"; };
 		E3E7BC775C7068D353E86E90DF51DE26 /* ConfettiView.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = ConfettiView.xcconfig; sourceTree = "<group>"; };
 		E60453C4A8BE5D515F331DE5DECEC1F1 /* ConfettiView-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ConfettiView-prefix.pch"; sourceTree = "<group>"; };
 		E6738FFA93487B8613838FADD1CDCF5F /* PullToRefresher.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = PullToRefresher.xcconfig; sourceTree = "<group>"; };
 		ECC6CC9138AC71996E8E1FFAD61EF1AE /* State.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = State.swift; path = PullToRefresh/State.swift; sourceTree = "<group>"; };
-		F0A252E0DC91AEC2795507C51E6708B8 /* Kanna.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Kanna.framework; path = Kanna.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F0A252E0DC91AEC2795507C51E6708B8 /* Kanna.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Kanna.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F232503254AC624E46119E841479D089 /* libxmlParserOption.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = libxmlParserOption.swift; path = Sources/Kanna/libxmlParserOption.swift; sourceTree = "<group>"; };
 		F3ED5CB8C7FF213D2BB11CFA6A5DEBEF /* Pods-Bold.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Bold.debug.xcconfig"; sourceTree = "<group>"; };
-		F72C2596C214215B908DA78DA479B07D /* KDLoadingView.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = KDLoadingView.modulemap; sourceTree = "<group>"; };
+		F72C2596C214215B908DA78DA479B07D /* KDLoadingView.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = KDLoadingView.modulemap; sourceTree = "<group>"; };
 		FECE2080CF03569CDD7746D192ABA831 /* KDLoadingView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = KDLoadingView.h; path = KDLoadingView/KDLoadingView.h; sourceTree = "<group>"; };
 		FFA253923E6F043A87134EC0CD3E10CF /* Pods-Bold.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Bold.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -213,7 +213,6 @@
 				84A19CC511B333929A17F0AC41C8CC6F /* KDLoadingView.swift */,
 				5EC00FE10AFD0C0AFCCC61CB5DA16D9B /* Support Files */,
 			);
-			name = KDLoadingView;
 			path = KDLoadingView;
 			sourceTree = "<group>";
 		};
@@ -228,7 +227,6 @@
 				F232503254AC624E46119E841479D089 /* libxmlParserOption.swift */,
 				B399068D5851A3A077386BAB071A7056 /* Support Files */,
 			);
-			name = Kanna;
 			path = Kanna;
 			sourceTree = "<group>";
 		};
@@ -240,7 +238,6 @@
 				3C0A07733354DD661F6A410527930EFE /* ShapeView.swift */,
 				84745CF075091246C102E726CF29B319 /* Support Files */,
 			);
-			name = ConfettiView;
 			path = ConfettiView;
 			sourceTree = "<group>";
 		};
@@ -399,7 +396,6 @@
 				11ACFFE55EF357868A9C1E8C8BB6290B /* SCLExtensions.swift */,
 				9CBA47DCDA0D240DD0966284BA52FAF2 /* Support Files */,
 			);
-			name = SCLAlertView;
 			path = SCLAlertView;
 			sourceTree = "<group>";
 		};
@@ -414,7 +410,6 @@
 				9651E80165AEF61FCC07A3BF9AD66699 /* UIScrollView+PullToRefresh.swift */,
 				6E91AB81807C66288C9741A3865A145E /* Support Files */,
 			);
-			name = PullToRefresher;
 			path = PullToRefresher;
 			sourceTree = "<group>";
 		};
@@ -589,6 +584,12 @@
 			attributes = {
 				LastSwiftUpdateCheck = 0730;
 				LastUpgradeCheck = 0700;
+				TargetAttributes = {
+					C6BEE7C7E0EA6DFECAC6FC61CCF30D11 = {
+						DevelopmentTeam = 7L6XAFKXYV;
+						ProvisioningStyle = Automatic;
+					};
+				};
 			};
 			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -1029,11 +1030,12 @@
 			baseConfigurationReference = E3E7BC775C7068D353E86E90DF51DE26 /* ConfettiView.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
 				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 7L6XAFKXYV;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
@@ -1047,6 +1049,7 @@
 				MODULEMAP_FILE = "Target Support Files/ConfettiView/ConfettiView.modulemap";
 				MTL_ENABLE_DEBUG_INFO = NO;
 				PRODUCT_NAME = ConfettiView;
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 3.0;
@@ -1061,11 +1064,12 @@
 			baseConfigurationReference = E3E7BC775C7068D353E86E90DF51DE26 /* ConfettiView.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
 				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 7L6XAFKXYV;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
@@ -1079,6 +1083,7 @@
 				MODULEMAP_FILE = "Target Support Files/ConfettiView/ConfettiView.modulemap";
 				MTL_ENABLE_DEBUG_INFO = YES;
 				PRODUCT_NAME = ConfettiView;
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";

@@ -11,6 +11,6 @@
 #endif
 
 
-FOUNDATION_EXPORT double SAConfettiViewVersionNumber;
-FOUNDATION_EXPORT const unsigned char SAConfettiViewVersionString[];
+FOUNDATION_EXPORT double ConfettiViewVersionNumber;
+FOUNDATION_EXPORT const unsigned char ConfettiViewVersionString[];
 
