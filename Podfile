@@ -12,7 +12,7 @@ target 'Bold' do
   pod 'PullToRefresher', '~> 2.0'
   pod 'SCLAlertView'
   pod 'KDLoadingView'
-  pod "SAConfettiView"
+  pod "ConfettiView"
 
 
 end

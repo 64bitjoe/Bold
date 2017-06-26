@@ -8,8 +8,11 @@
 
 import UIKit
 import SCLAlertView
+import ConfettiView
 
 class HomeScreenControllerViewController: UIViewController , UITableViewDelegate, UITableViewDataSource /* cellDelegate */{
+    @IBOutlet weak var cV: UIView!
+    
 @IBOutlet weak var tableView: UITableView!
     
     var actions = [String]()
@@ -17,6 +20,7 @@ class HomeScreenControllerViewController: UIViewController , UITableViewDelegate
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        cV.isHidden = true
 
         cellbackground = [#imageLiteral(resourceName: "Schedule"), #imageLiteral(resourceName: "Coffee Passport"), #imageLiteral(resourceName: "Partner Hub") , #imageLiteral(resourceName: "About")]
         actions = ["Shedule", "Coffee Passport", "Partner Hub", "About"]
@@ -74,6 +78,7 @@ class HomeScreenControllerViewController: UIViewController , UITableViewDelegate
             )
             let alertView = SCLAlertView(appearance: appearance)
             alertView.showNotice("Soon!", subTitle: "Working on it!")
+            cV.isHidden = false
             // let vc = self.storyboard?.instantiateViewController(withIdentifier: "about")
             // self.present(vc!, animated: false, completion: nil)
             

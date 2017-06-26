@@ -295,6 +295,10 @@
                                     <navigationItem title="Bold" id="S4q-EU-jAX"/>
                                 </items>
                             </navigationBar>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wxv-0I-H9A" customClass="ConfettiView" customModule="ConfettiView">
+                                <rect key="frame" x="0.0" y="20" width="414" height="716"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -303,14 +307,21 @@
                             <constraint firstItem="OQC-sR-ziW" firstAttribute="leading" secondItem="VF0-6N-zpt" secondAttribute="leadingMargin" id="KoK-0W-0mQ"/>
                             <constraint firstItem="jJu-5z-aWY" firstAttribute="centerX" secondItem="OQC-sR-ziW" secondAttribute="centerX" id="Ljw-P5-utL"/>
                             <constraint firstAttribute="trailingMargin" secondItem="OQC-sR-ziW" secondAttribute="trailing" id="N2J-1o-qEg"/>
+                            <constraint firstItem="Wxv-0I-H9A" firstAttribute="leading" secondItem="VF0-6N-zpt" secondAttribute="leading" id="WHL-3V-YkM"/>
                             <constraint firstItem="bgw-U6-fHJ" firstAttribute="top" secondItem="jJu-5z-aWY" secondAttribute="top" id="YJd-2m-R2S"/>
                             <constraint firstItem="bgw-U6-fHJ" firstAttribute="trailing" secondItem="jJu-5z-aWY" secondAttribute="trailing" id="cN1-wd-HyX"/>
+                            <constraint firstItem="8NI-NI-2mM" firstAttribute="top" secondItem="Wxv-0I-H9A" secondAttribute="bottom" id="dLX-q6-oAs"/>
                             <constraint firstItem="OQC-sR-ziW" firstAttribute="top" secondItem="jJu-5z-aWY" secondAttribute="bottom" id="iUv-u7-ddh"/>
                             <constraint firstItem="jJu-5z-aWY" firstAttribute="top" secondItem="DF3-NH-HaG" secondAttribute="bottom" id="jBP-5b-7aS"/>
                             <constraint firstItem="8NI-NI-2mM" firstAttribute="top" secondItem="OQC-sR-ziW" secondAttribute="bottom" id="rlO-kD-fQY"/>
                             <constraint firstItem="jJu-5z-aWY" firstAttribute="leading" secondItem="VF0-6N-zpt" secondAttribute="leading" id="snR-f7-vZd"/>
+                            <constraint firstAttribute="trailing" secondItem="Wxv-0I-H9A" secondAttribute="trailing" id="tSn-eI-tYe"/>
+                            <constraint firstItem="Wxv-0I-H9A" firstAttribute="top" secondItem="DF3-NH-HaG" secondAttribute="bottom" id="vGQ-pd-CQq"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="cV" destination="Wxv-0I-H9A" id="wKW-Cc-7I3"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zyL-BK-hgL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
