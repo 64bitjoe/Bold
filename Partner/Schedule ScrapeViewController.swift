@@ -9,14 +9,19 @@
 
 import UIKit
 import Kanna
+import KDLoadingView
 
 class Schedule_ScrapeViewController: UIViewController {
         @IBOutlet weak var webView: UIWebView!
-//        @IBOutlet weak var loadingView: UIView!
+    @IBOutlet weak var loadingViewCont: UIView!
+    @IBOutlet weak var loadingView: KDLoadingView!
+    @IBOutlet weak var labelforWait: UILabel!
     
     let mysite = String("https://mysite.starbucks.com/MySchedule/Schedule.aspx")
     override func viewDidLoad() {
-//        self.loadingView.isHidden = true
+        
+        self.loadingViewCont.isHidden = true
+        self.loadingView.isHidden = true
         super.viewDidLoad()
         // webView suff
         let url = URL(string: mysite!)
@@ -24,6 +29,18 @@ class Schedule_ScrapeViewController: UIViewController {
         
         webView.loadRequest(request)
 
+        let dateFormatter = DateFormatter()
+        let timeFormatter = DateFormatter()
+        
+        dateFormatter.dateStyle = .long
+        timeFormatter.timeStyle = .long
+        
+        
+        let  dateLabel = dateFormatter.string(from: NSDate() as Date)
+        let timeLabel = timeFormatter.string(from: NSDate() as Date)
+        UserDefaults.standard.set(dateLabel, forKey: "datelabel")
+        UserDefaults.standard.set(timeLabel, forKey: "timelabel")
+        
     }
     func webViewDidStartLoad(_ : UIWebView) {
         print("LOAD START")
@@ -35,18 +52,20 @@ class Schedule_ScrapeViewController: UIViewController {
         let currentURL: String = (webView.request!.url!.relativeString)
         //THIS WORKS!
         if currentURL == mysite {
-            
-            
+            labelforWait.text = "Hey! We are looking for your schedule."
+            self.loadingViewCont.isHidden = false
+            self.loadingView.isHidden = false
+            self.loadingView.startAnimating()
             let url = NSURL(string: mysite!)
             let html  =  webView.stringByEvaluatingJavaScript(from: "document.documentElement.outerHTML")
-            let delayInSeconds = 4.0
+            let delayInSeconds = 5.0
             DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + delayInSeconds) {
 
                 
             if url != nil {
                 let task = URLSession.shared.dataTask(with: url! as URL, completionHandler: { (data, response, error) -> Void in
                     if error == nil {
-//                        self.loadingView.isHidden = false
+                        
                             let defaults = UserDefaults.standard
                             
                         defaults.removeObject(forKey: "monday0time")
@@ -922,7 +941,7 @@ class Schedule_ScrapeViewController: UIViewController {
                    
                     }
                     let vc = self.storyboard?.instantiateViewController(withIdentifier: "View")
-                    self.present(vc!, animated: true, completion: nil)
+                    self.present(vc!, animated: false, completion: nil)
 
                     
                 })

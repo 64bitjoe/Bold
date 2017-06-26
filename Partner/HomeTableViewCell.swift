@@ -18,18 +18,13 @@ import UIKit
 //}
 class HomeTableViewCell: UITableViewCell {
 
-    @IBOutlet weak var nextView: UIButton!
+    @IBOutlet weak var cellback: UIImageView!
     var indexPath:IndexPath!
-//    weak var cellDelegate: cellDelegate?
-    
-//    @IBAction func nextViewButonPressed(_ sender: UIButton) {
-//    
-//        cellDelegate?.didPressButton(sender.tag)
-//    }
     @IBOutlet weak var action: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

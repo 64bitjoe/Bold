@@ -7,10 +7,12 @@
 //
 
 import UIKit
+import KDLoadingView
 
 class passportVC: UIViewController {
     @IBOutlet weak var webView: UIWebView!
-
+    @IBOutlet weak var loadingView: KDLoadingView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -22,11 +24,18 @@ class passportVC: UIViewController {
         // Do any additional setup after loading the view.
     }
 
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
+    func webViewDidStartLoad(_ : UIWebView) {
+        loadingView.startAnimating()
+        
+    }
+    func webViewDidFinishLoad(_ : UIWebView) {
+        loadingView.stopAnimating()
+    }
 
     /*
     // MARK: - Navigation
@@ -39,7 +48,7 @@ class passportVC: UIViewController {
  */
     @IBAction func goHome(_ sender: Any) {
         let vc = self.storyboard?.instantiateViewController(withIdentifier: "Home")
-        self.present(vc!, animated: true, completion: nil)
+        self.present(vc!, animated: false, completion: nil)
         
     }
 

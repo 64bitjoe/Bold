@@ -7,15 +7,18 @@
 //
 
 import UIKit
+import SCLAlertView
 
 class HomeScreenControllerViewController: UIViewController , UITableViewDelegate, UITableViewDataSource /* cellDelegate */{
 @IBOutlet weak var tableView: UITableView!
     
     var actions = [String]()
+    var cellbackground = [UIImage]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        cellbackground = [#imageLiteral(resourceName: "Schedule"), #imageLiteral(resourceName: "Coffee Passport"), #imageLiteral(resourceName: "Partner Hub") , #imageLiteral(resourceName: "About")]
         actions = ["Shedule", "Coffee Passport", "Partner Hub", "About"]
         // Do any additional setup after loading the view.
     }
@@ -38,38 +41,44 @@ class HomeScreenControllerViewController: UIViewController , UITableViewDelegate
         let row = indexPath.row
         cell.action.text = actions[row]
 //        cell.cellDelegate = self
+        cell.cellback.image = cellbackground[row]
         cell.indexPath = indexPath
         return cell
     }
     
-    @IBAction func submit(_ sender: UIButton) {
-        var superview = sender.superview
-        while let view = superview, !(view is UITableViewCell) {
-            superview = view.superview
-        }
-        guard let cell = superview as? UITableViewCell else {
-            print("button is not contained in a table view cell")
-            return
-        }
-        guard let indexPath = tableView.indexPath(for: cell) else {
-            print("failed to get index path for cell containing button")
-            return
-        }
-        // We've got the index path for the cell that contains the button, now do something with it.
-        print("button is in row \(indexPath.row)")
+
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if indexPath.row == 0 {
+            print("Schedule Tapped")
             let vc = self.storyboard?.instantiateViewController(withIdentifier: "View")
-            self.present(vc!, animated: true, completion: nil)
-        } else if indexPath.row == 1 {
+            self.present(vc!, animated: false, completion: nil)
+
+        }  else if indexPath.row == 1 {
             
             let vc = self.storyboard?.instantiateViewController(withIdentifier: "coffeePassportVC")
-            self.present(vc!, animated: true, completion: nil)
-
-        }else if indexPath.row == 2 {
-
+            self.present(vc!, animated: false, completion: nil)
+            
+        } else if indexPath.row == 2 {
+            
             let vc = self.storyboard?.instantiateViewController(withIdentifier: "PartnerHubVC")
-            self.present(vc!, animated: true, completion: nil)
+            self.present(vc!, animated: false, completion: nil)
         }
+        else if indexPath.row == 3 {
+            let appearance = SCLAlertView.SCLAppearance(
+                kTitleFont: UIFont(name: "HelveticaNeue", size: 20)!,
+                kTextFont: UIFont(name: "HelveticaNeue", size: 14)!,
+                kButtonFont: UIFont(name: "HelveticaNeue-Bold", size: 14)!,
+                
+                showCloseButton: true
+                
+            )
+            let alertView = SCLAlertView(appearance: appearance)
+            alertView.showNotice("Soon!", subTitle: "Working on it!")
+            // let vc = self.storyboard?.instantiateViewController(withIdentifier: "about")
+            // self.present(vc!, animated: false, completion: nil)
+            
+        }
+
     }
     
     /*
@@ -82,9 +91,4 @@ class HomeScreenControllerViewController: UIViewController , UITableViewDelegate
     }
     */
 
-
-    func schedule(){
-        let vc = self.storyboard?.instantiateViewController(withIdentifier: "View")
-        self.present(vc!, animated: true, completion: nil)
-    }
 }

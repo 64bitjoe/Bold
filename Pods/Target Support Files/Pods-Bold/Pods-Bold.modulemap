@@ -1,0 +1,6 @@
+framework module Pods_Bold {
+  umbrella header "Pods-Bold-umbrella.h"
+
+  export *
+  module * { export * }
+}
