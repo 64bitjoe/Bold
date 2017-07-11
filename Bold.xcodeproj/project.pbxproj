@@ -7,10 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1F74D3AD21F4953ADD060EE5 /* Pods_Partner.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C57DF57070C75FABF95E26F9 /* Pods_Partner.framework */; };
 		B042BC7C1EE84842004E11BA /* contentVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B042BC7B1EE84842004E11BA /* contentVC.swift */; };
 		B042BC7F1EE84FBD004E11BA /* passportVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B042BC7E1EE84FBD004E11BA /* passportVC.swift */; };
 		B046EEB61ED7D1960076DFBA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B046EEB51ED7D1960076DFBA /* ViewController.swift */; };
+		B07543251F1482CA00AA3B20 /* UIViewX.swift in Sources */ = {isa = PBXBuildFile; fileRef = B07543241F1482CA00AA3B20 /* UIViewX.swift */; };
 		B08F62BD1EEB9722003483D9 /* aboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B08F62BC1EEB9722003483D9 /* aboutViewController.swift */; };
 		B0A2B70F1EE48DEE00BD69EF /* HomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0A2B70E1EE48DEE00BD69EF /* HomeTableViewCell.swift */; };
 		B0A2B7131EE48EA500BD69EF /* HomeScreenControllerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0A2B7121EE48EA500BD69EF /* HomeScreenControllerViewController.swift */; };
@@ -28,9 +28,11 @@
 		0095D7536149FA9DC9B97B54 /* Pods-Bold.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bold.release.xcconfig"; path = "Pods/Target Support Files/Pods-Bold/Pods-Bold.release.xcconfig"; sourceTree = "<group>"; };
 		0A065EE0FD589747FA64CEA5 /* Pods-Partner.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Partner.release.xcconfig"; path = "Pods/Target Support Files/Pods-Partner/Pods-Partner.release.xcconfig"; sourceTree = "<group>"; };
 		73AED7AA4F7C475D2B5643F8 /* Pods_Bold.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Bold.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B029630E1F12AB0F00DE4731 /* Bold.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Bold.entitlements; sourceTree = "<group>"; };
 		B042BC7B1EE84842004E11BA /* contentVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = contentVC.swift; sourceTree = "<group>"; };
 		B042BC7E1EE84FBD004E11BA /* passportVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = passportVC.swift; sourceTree = "<group>"; };
 		B046EEB51ED7D1960076DFBA /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		B07543241F1482CA00AA3B20 /* UIViewX.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewX.swift; sourceTree = "<group>"; };
 		B08F62BC1EEB9722003483D9 /* aboutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = aboutViewController.swift; sourceTree = "<group>"; };
 		B0A2B70E1EE48DEE00BD69EF /* HomeTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeTableViewCell.swift; sourceTree = "<group>"; };
 		B0A2B7121EE48EA500BD69EF /* HomeScreenControllerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeScreenControllerViewController.swift; sourceTree = "<group>"; };
@@ -53,7 +55,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1F74D3AD21F4953ADD060EE5 /* Pods_Partner.framework in Frameworks */,
 				D343B4A3BA40096A605A3207 /* Pods_Bold.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -106,6 +107,7 @@
 		B0A692691ECBD9CD005F8A8D = {
 			isa = PBXGroup;
 			children = (
+				B029630E1F12AB0F00DE4731 /* Bold.entitlements */,
 				B0A2B7161EE7AF4900BD69EF /* Default-568h@2x.png */,
 				B0A692741ECBD9CD005F8A8D /* Partner */,
 				B0A692731ECBD9CD005F8A8D /* Products */,
@@ -128,6 +130,7 @@
 				B042BC7D1EE84A38004E11BA /* Cell Controllers */,
 				B0A2B7151EE4903100BD69EF /* Controllers */,
 				B0A692751ECBD9CD005F8A8D /* AppDelegate.swift */,
+				B07543241F1482CA00AA3B20 /* UIViewX.swift */,
 				B0A692791ECBD9CD005F8A8D /* Main.storyboard */,
 				B0A6927F1ECBD9CD005F8A8D /* Assets.xcassets */,
 				B0A692811ECBD9CD005F8A8D /* LaunchScreen.storyboard */,
@@ -173,6 +176,11 @@
 						CreatedOnToolsVersion = 8.2.1;
 						DevelopmentTeam = 7L6XAFKXYV;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -264,6 +272,7 @@
 				B042BC7F1EE84FBD004E11BA /* passportVC.swift in Sources */,
 				B0A2B70F1EE48DEE00BD69EF /* HomeTableViewCell.swift in Sources */,
 				B08F62BD1EEB9722003483D9 /* aboutViewController.swift in Sources */,
+				B07543251F1482CA00AA3B20 /* UIViewX.swift in Sources */,
 				B046EEB61ED7D1960076DFBA /* ViewController.swift in Sources */,
 				B0A692911ECC0B0F005F8A8D /* Schedule ScrapeViewController.swift in Sources */,
 				B0A692761ECBD9CD005F8A8D /* AppDelegate.swift in Sources */,
@@ -319,6 +328,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_BITCODE = YES;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -368,6 +378,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_BITCODE = YES;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -391,7 +402,9 @@
 			baseConfigurationReference = D505292730D45459C4988450 /* Pods-Bold.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Bold.entitlements;
 				DEVELOPMENT_TEAM = 7L6XAFKXYV;
+				ENABLE_BITCODE = YES;
 				INFOPLIST_FILE = Partner/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -406,7 +419,9 @@
 			baseConfigurationReference = 0095D7536149FA9DC9B97B54 /* Pods-Bold.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Bold.entitlements;
 				DEVELOPMENT_TEAM = 7L6XAFKXYV;
+				ENABLE_BITCODE = YES;
 				INFOPLIST_FILE = Partner/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
