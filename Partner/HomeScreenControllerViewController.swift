@@ -50,8 +50,8 @@ class HomeScreenControllerViewController: UIViewController , UITableViewDelegate
         currentColorArrayIndex = currentColorArrayIndex == (colorArray.count - 1) ? 0 : currentColorArrayIndex + 1
         
         UIView.transition(with: background, duration: 3.2, options: [.transitionCrossDissolve], animations: {
-            self.background.firstColor = self.colorArray[self.currentColorArrayIndex].color1
-            self.background.secondColor = self.colorArray[self.currentColorArrayIndex].color2
+        self.background.firstColor = self.colorArray[self.currentColorArrayIndex].color1
+           self.background.secondColor = self.colorArray[self.currentColorArrayIndex].color2
         }) { (success) in
             self.transitionToColors()
         }
@@ -94,34 +94,39 @@ class HomeScreenControllerViewController: UIViewController , UITableViewDelegate
             self.present(vc!, animated: false, completion: nil)
         }
         else if indexPath.row == 3 {
-            let appearance = SCLAlertView.SCLAppearance(
-                kTitleFont: UIFont(name: "HelveticaNeue", size: 20)!,
-                kTextFont: UIFont(name: "HelveticaNeue", size: 14)!,
-                kButtonFont: UIFont(name: "HelveticaNeue-Bold", size: 14)!,
-                
-                showCloseButton: true
-                
-            )
-            let alertView = SCLAlertView(appearance: appearance)
-            alertView.showNotice("Soon!", subTitle: "Working on it! Have Some Confetti for now <3")
+            let vc = self.storyboard?.instantiateViewController(withIdentifier: "settings")
+            self.present(vc!, animated: false, completion: nil)
 
-            
-            if cV.isHidden == true {
-                cV.isHidden = false
-                let delayInSeconds = 10.0
-                DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + delayInSeconds) {
-                    self.cV.isHidden = true
-            }
+//            let appearance = SCLAlertView.SCLAppearance(
+//                kTitleFont: UIFont(name: "HelveticaNeue", size: 20)!,
+//                kTextFont: UIFont(name: "HelveticaNeue", size: 14)!,
+//                kButtonFont: UIFont(name: "HelveticaNeue-Bold", size: 14)!,
+//                
+//                showCloseButton: true
+//                
+//            )
+//            let alertView = SCLAlertView(appearance: appearance)
+//            alertView.showNotice("Soon!", subTitle: "Working on it! Have Some Confetti for now <3")
+//
+//            
+//            if cV.isHidden == true {
+//                cV.isHidden = false
+//                let delayInSeconds = 10.0
+//                DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + delayInSeconds) {
+//                    self.cV.isHidden = true
 
-            }
+
+//          }
             // let vc = self.storyboard?.instantiateViewController(withIdentifier: "about")
             // self.present(vc!, animated: false, completion: nil)
             
         } else if indexPath.row == 4 {
-            if cV.isHidden == true {
-                cV.isHidden = false
-                self.cV.isHidden = true
-                }
+            let vc = self.storyboard?.instantiateViewController(withIdentifier: "about")
+            self.present(vc!, animated: false, completion: nil)
+//            if cV.isHidden == true {
+//                cV.isHidden = false
+//                self.cV.isHidden = true
+//                }
 
         }
 
