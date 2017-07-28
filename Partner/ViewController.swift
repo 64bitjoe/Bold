@@ -28,6 +28,7 @@ class ViewController: UIViewController , UITableViewDelegate, UITableViewDataSou
     
     //ON VIEW FIRST LOAD
     override func viewDidLoad() {
+        
         let launchedBefore = UserDefaults.standard.bool(forKey: "launched")
         if launchedBefore  {
             print("Not first launch.")
@@ -76,41 +77,7 @@ class ViewController: UIViewController , UITableViewDelegate, UITableViewDataSou
 
         
         DispatchQueue.main.async {
-//        let launchedBefore = UserDefaults.standard.bool(forKey: "launched")
-//        if launchedBefore  {
-//            print("Not first launch.")
-//        } else {
-//            let appearance = SCLAlertView.SCLAppearance(
-//                kTitleFont: UIFont(name: "HelveticaNeue", size: 20)!,
-//                kTextFont: UIFont(name: "HelveticaNeue", size: 14)!,
-//                kButtonFont: UIFont(name: "HelveticaNeue-Bold", size: 14)!,
-//                
-//                showCloseButton: false
-//                
-//            )
-//
-//            let alertView = SCLAlertView(appearance: appearance)
-//            alertView.addButton("Log Me In!"){
-//                let vc = self.storyboard?.instantiateViewController(withIdentifier: "LoginViewController")
-//                self.present(vc!, animated: true, completion: nil)
-//                UserDefaults.standard.set(true, forKey: "launched")
-//                
-//                let dateFormatter = DateFormatter()
-//                let timeFormatter = DateFormatter()
-//                
-//                dateFormatter.dateStyle = .long
-//                timeFormatter.timeStyle = .long
-//                
-//                
-//                let  dateLabel = dateFormatter.string(from: NSDate() as Date)
-//                let timeLabel = timeFormatter.string(from: NSDate() as Date)
-//                UserDefaults.standard.set(dateLabel, forKey: "datelabel")
-//                UserDefaults.standard.set(timeLabel, forKey: "timelabel")
-//            }
-//            alertView.showSuccess("Welcome!", subTitle: "We need to grab the schedule. Press \"Log Me in \"to Get Started!")
-//
-//            
-//        }
+
          super.viewDidLoad()
         let defaults = UserDefaults.standard
         self.datelabel = [defaults.string(forKey: "monday0date"), defaults.string(forKey: "tues0date"), defaults.string(forKey: "wed0date"), defaults.string(forKey: "thur0date"), defaults.string(forKey: "fri0date"), defaults.string(forKey: "sat0date"), defaults.string(forKey: "sun0date"), defaults.string(forKey: "monday1date"), defaults.string(forKey: "tues1date"), defaults.string(forKey: "wed1date"), defaults.string(forKey: "thur1date"), defaults.string(forKey: "fri1date"), defaults.string(forKey: "sat1date"), defaults.string(forKey: "sun1date") ]

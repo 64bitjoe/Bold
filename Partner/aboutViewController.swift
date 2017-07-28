@@ -26,17 +26,9 @@ class aboutViewController: UIViewController {
         self.present(vc!, animated: false, completion: nil)
     }
     @IBAction func senderreset(_ sender: Any) {
-        resetDefaults()
+    
     }
 
-    func resetDefaults() {
-        let defaults = UserDefaults.standard
-        let dictionary = defaults.dictionaryRepresentation()
-        dictionary.keys.forEach { key in
-            defaults.removeObject(forKey: key)
-        }
-        defaults.synchronize()
-    }
     /*
     // MARK: - Navigation
 

@@ -151,11 +151,12 @@
                         <outlet property="loadingView" destination="nkf-kc-y0Y" id="eGI-t6-C6J"/>
                         <outlet property="loadingViewCont" destination="eF7-Se-nU3" id="Ibw-fZ-NQ6"/>
                         <outlet property="webView" destination="5ZN-hq-tVJ" id="7cb-B0-919"/>
+                        <segue destination="BYZ-38-t0r" kind="presentation" identifier="go" animates="NO" id="ecL-qB-fsF"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MJg-Us-2SV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="995.65217391304361" y="287.77173913043481"/>
+            <point key="canvasLocation" x="1014" y="288"/>
         </scene>
         <!--about-->
         <scene sceneID="eaa-Ng-Mei">
@@ -207,10 +208,22 @@
                                     <color key="titleColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="boolean" keyPath="popIn" value="YES"/>
                                     <userDefinedRuntimeAttribute type="number" keyPath="popInDelay">
-                                        <real key="value" value="1"/>
+                                        <real key="value" value="0.0"/>
                                     </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="animateDelay">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="animateFrom">
+                                        <integer key="value" value="7"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="3"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="animate" value="YES"/>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="senderreset:" destination="6xd-gg-vzd" eventType="touchUpInside" id="PuR-iW-9a5"/>
@@ -533,7 +546,7 @@
                                         <barButtonItem key="leftBarButtonItem" image="gohome" id="Wxg-tp-V60">
                                             <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <connections>
-                                                <action selector="goHome:" destination="8o8-Iu-oJG" id="ora-g1-ZPy"/>
+                                                <action selector="goHome:" destination="8o8-Iu-oJG" id="TSA-H4-Yhz"/>
                                             </connections>
                                         </barButtonItem>
                                     </navigationItem>

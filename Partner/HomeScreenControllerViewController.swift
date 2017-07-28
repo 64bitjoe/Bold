@@ -96,50 +96,17 @@ class HomeScreenControllerViewController: UIViewController , UITableViewDelegate
         else if indexPath.row == 3 {
             let vc = self.storyboard?.instantiateViewController(withIdentifier: "settings")
             self.present(vc!, animated: false, completion: nil)
-
-//            let appearance = SCLAlertView.SCLAppearance(
-//                kTitleFont: UIFont(name: "HelveticaNeue", size: 20)!,
-//                kTextFont: UIFont(name: "HelveticaNeue", size: 14)!,
-//                kButtonFont: UIFont(name: "HelveticaNeue-Bold", size: 14)!,
-//                
-//                showCloseButton: true
-//                
-//            )
-//            let alertView = SCLAlertView(appearance: appearance)
-//            alertView.showNotice("Soon!", subTitle: "Working on it! Have Some Confetti for now <3")
-//
-//            
-//            if cV.isHidden == true {
-//                cV.isHidden = false
-//                let delayInSeconds = 10.0
-//                DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + delayInSeconds) {
-//                    self.cV.isHidden = true
-
-
-//          }
-            // let vc = self.storyboard?.instantiateViewController(withIdentifier: "about")
-            // self.present(vc!, animated: false, completion: nil)
-            
         } else if indexPath.row == 4 {
             let vc = self.storyboard?.instantiateViewController(withIdentifier: "about")
             self.present(vc!, animated: false, completion: nil)
-//            if cV.isHidden == true {
-//                cV.isHidden = false
-//                self.cV.isHidden = true
-//                }
+            if cV.isHidden == true {
+                cV.isHidden = false
+                self.cV.isHidden = true
+                }
 
         }
 
     }
-    
-    /*
-    // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

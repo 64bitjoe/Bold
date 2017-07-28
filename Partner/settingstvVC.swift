@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SCLAlertView
 
 class settingstvVC: UITableViewController {
 
@@ -25,7 +26,32 @@ class settingstvVC: UITableViewController {
         // Dispose of any resources that can be recreated.
     }
 
-
+        override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+            if indexPath.section == 1 && indexPath.row == 2 {
+                            let appearance = SCLAlertView.SCLAppearance(
+                                kTitleFont: UIFont(name: "HelveticaNeue", size: 20)!,
+                                kTextFont: UIFont(name: "HelveticaNeue", size: 14)!,
+                                kButtonFont: UIFont(name: "HelveticaNeue-Bold", size: 14)!
+            
+                            )
+                            let alertView = SCLAlertView(appearance: appearance)
+                            alertView.showNotice("Soon!", subTitle: "Working on it! Have Some Confetti for now <3")
+                            alertView.addButton("CLEAR DATA", action: { 
+                                self.resetDefaults()
+                                
+                            })
+            }
+    }
+    
+    func resetDefaults() {
+        let defaults = UserDefaults.standard
+        let dictionary = defaults.dictionaryRepresentation()
+        dictionary.keys.forEach { key in
+            defaults.removeObject(forKey: key)
+        }
+        defaults.synchronize()
+        UserDefaults.standard.set(true, forKey: "launched")
+    }
 
     /*
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
