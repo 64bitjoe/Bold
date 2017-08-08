@@ -94,6 +94,7 @@ if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "$BUILT_PRODUCTS_DIR/Kanna/Kanna.framework"
   install_framework "$BUILT_PRODUCTS_DIR/PullToRefresher/PullToRefresh.framework"
   install_framework "$BUILT_PRODUCTS_DIR/SCLAlertView/SCLAlertView.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/SwiftyStoreKit/SwiftyStoreKit.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "$BUILT_PRODUCTS_DIR/ConfettiView/ConfettiView.framework"
@@ -101,6 +102,7 @@ if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "$BUILT_PRODUCTS_DIR/Kanna/Kanna.framework"
   install_framework "$BUILT_PRODUCTS_DIR/PullToRefresher/PullToRefresh.framework"
   install_framework "$BUILT_PRODUCTS_DIR/SCLAlertView/SCLAlertView.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/SwiftyStoreKit/SwiftyStoreKit.framework"
 fi
 if [ "${COCOAPODS_PARALLEL_CODE_SIGN}" == "true" ]; then
   wait

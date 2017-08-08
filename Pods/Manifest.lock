@@ -4,6 +4,7 @@ PODS:
   - KDLoadingView (1.0.4)
   - PullToRefresher (2.0.2)
   - SCLAlertView (0.7.0)
+  - SwiftyStoreKit (0.10.2)
 
 DEPENDENCIES:
   - ConfettiView
@@ -11,6 +12,7 @@ DEPENDENCIES:
   - KDLoadingView
   - PullToRefresher (~> 2.0)
   - SCLAlertView
+  - SwiftyStoreKit
 
 SPEC CHECKSUMS:
   ConfettiView: e70aa9be11d778d2c2778429aad92fa6f5d9c6e7
@@ -18,7 +20,8 @@ SPEC CHECKSUMS:
   KDLoadingView: fcb015daf91c245f0a212fd52b8061621f421dfe
   PullToRefresher: 5e101a8c3523e67ee0291375ba932ef59e0853c2
   SCLAlertView: 8a14ffc40590c619e183eed2298b854385f30be1
+  SwiftyStoreKit: 2a2d776afd1f1427e64831c50b36b33d0f9a45f5
 
-PODFILE CHECKSUM: ce8a6a70e41545ac6260a7fcd615c3ae0808c95d
+PODFILE CHECKSUM: 4643fbc8a2d43e31b2e50e264d762d2cfd25fbea
 
 COCOAPODS: 1.2.0

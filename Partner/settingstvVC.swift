@@ -25,7 +25,7 @@ class settingstvVC: UITableViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
+//////////////////////////////////// NOT FINISHED
         override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
             if indexPath.section == 1 && indexPath.row == 2 {
                             let appearance = SCLAlertView.SCLAppearance(
@@ -40,6 +40,9 @@ class settingstvVC: UITableViewController {
                                 self.resetDefaults()
                                 
                             })
+            } else if indexPath.section == 1 && indexPath.row == 3 {
+                let vc = self.storyboard?.instantiateViewController(withIdentifier: "LoginViewController")
+                self.present(vc!, animated: true, completion: nil)
             }
     }
     

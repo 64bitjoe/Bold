@@ -13,6 +13,7 @@ target 'Bold' do
   pod 'SCLAlertView'
   pod 'KDLoadingView'
   pod "ConfettiView"
+  pod 'SwiftyStoreKit'
 
 
 end

@@ -1,37 +1,96 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Launch Screen View Controller-->
         <scene sceneID="EHf-IW-A2E">
             <objects>
-                <viewController id="01J-lp-oVM" sceneMemberID="viewController">
+                <viewController id="01J-lp-oVM" customClass="LaunchScreenViewController" customModule="Bold" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Llm-lL-Icb"/>
                         <viewControllerLayoutGuide type="bottom" id="xb3-aO-Qok"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
+                    <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3" customClass="UIViewX" customModule="Bold" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background" translatesAutoresizingMaskIntoConstraints="NO" id="tTp-2O-RiQ">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Launch Icon" translatesAutoresizingMaskIntoConstraints="NO" id="hym-ad-YyG" customClass="UIImageViewX" customModule="Bold" customModuleProvider="target">
+                                <rect key="frame" x="87" y="233" width="200" height="200"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="popIn" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                        <real key="value" value="3"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                        <color key="value" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                        <real key="value" value="4"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowOffsetY">
+                                        <real key="value" value="3"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Made with love ❤️" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EYb-ZF-GMX">
+                                <rect key="frame" x="52" y="611" width="271" height="29"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="24"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bold" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qzf-5d-phe">
+                                <rect key="frame" x="126" y="110" width="123" height="102"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="123" id="ag5-3n-QD2"/>
+                                    <constraint firstAttribute="height" constant="102" id="qsX-dL-Iup"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="55"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="By: Joseph Speakman" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gE2-FN-I07">
+                                <rect key="frame" x="134" y="647" width="106" height="12"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="10"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="tTp-2O-RiQ" secondAttribute="bottom" id="3Vd-eC-Pj4"/>
-                            <constraint firstItem="tTp-2O-RiQ" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="ZV1-sc-UxK"/>
-                            <constraint firstItem="tTp-2O-RiQ" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="lm6-T4-Jxv"/>
-                            <constraint firstAttribute="trailing" secondItem="tTp-2O-RiQ" secondAttribute="trailing" id="z7q-Oo-BVY"/>
+                            <constraint firstItem="qzf-5d-phe" firstAttribute="centerX" secondItem="hym-ad-YyG" secondAttribute="centerX" id="9Pz-MJ-EGm"/>
+                            <constraint firstItem="EYb-ZF-GMX" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leadingMargin" constant="36" id="AON-I0-3LR"/>
+                            <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="gE2-FN-I07" secondAttribute="bottom" constant="8" symbolic="YES" id="HTq-8W-Xv2"/>
+                            <constraint firstItem="qzf-5d-phe" firstAttribute="top" secondItem="Llm-lL-Icb" secondAttribute="bottom" constant="90" id="QPY-l2-HfW"/>
+                            <constraint firstItem="hym-ad-YyG" firstAttribute="top" secondItem="qzf-5d-phe" secondAttribute="bottom" constant="21" id="U9O-e4-SOe"/>
+                            <constraint firstItem="EYb-ZF-GMX" firstAttribute="centerX" secondItem="gE2-FN-I07" secondAttribute="centerX" id="XNF-pI-l9p"/>
+                            <constraint firstItem="gE2-FN-I07" firstAttribute="top" secondItem="EYb-ZF-GMX" secondAttribute="bottom" constant="7" id="Ye7-p8-Xxj"/>
+                            <constraint firstItem="hym-ad-YyG" firstAttribute="centerX" secondItem="EYb-ZF-GMX" secondAttribute="centerX" id="dSQ-BE-ugO"/>
+                            <constraint firstItem="hym-ad-YyG" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="e9K-cD-Vav"/>
+                            <constraint firstItem="hym-ad-YyG" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leadingMargin" constant="71" id="jMu-MO-7gK"/>
+                            <constraint firstItem="hym-ad-YyG" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="uc1-46-O8A"/>
                         </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="firstColor">
+                                <color key="value" red="0.319326418" green="0.93970456489999998" blue="0.86368583909999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="secondColor">
+                                <color key="value" red="0.1175327757705205" green="0.42960555539187817" blue="0.26441773490193349" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                <real key="value" value="7"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -40,6 +99,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Background" width="375" height="667"/>
+        <image name="Launch Icon" width="167" height="167"/>
     </resources>
 </document>

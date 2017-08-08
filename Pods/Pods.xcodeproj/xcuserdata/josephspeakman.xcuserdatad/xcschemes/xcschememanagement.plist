@@ -54,6 +54,11 @@
 			<key>orderHint</key>
 			<integer>5</integer>
 		</dict>
+		<key>SwiftyStoreKit.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>11</integer>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
@@ -112,6 +117,11 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>62767E15A8477A730E9E89A40DA128AA</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>6A80F0208760CC6DD6763A0AAD11D131</key>
 		<dict>
 			<key>primary</key>
@@ -128,6 +138,11 @@
 			<true/>
 		</dict>
 		<key>7823DCECC945615276B9F4B2D363EC22</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>7D040EF8E95C538BDD17FA0F13D19826</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -152,6 +167,11 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>BCB5D93BEF7D56FCF023C3F3567AC758</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>C6BEE7C7E0EA6DFECAC6FC61CCF30D11</key>
 		<dict>
 			<key>primary</key>
@@ -168,6 +188,11 @@
 			<true/>
 		</dict>
 		<key>D9820298D3F38157F70DEFFD4F7AB389</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>DD4B0AB3ED5150BCBE2A13A5BAF750CE</key>
 		<dict>
 			<key>primary</key>
 			<true/>

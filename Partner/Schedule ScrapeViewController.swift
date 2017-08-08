@@ -12,6 +12,7 @@ import Kanna
 import KDLoadingView
 
 class Schedule_ScrapeViewController: UIViewController {
+    @IBOutlet weak var waitBackground: UIViewX!
     @IBOutlet weak var background: UIViewX!
     @IBOutlet weak var webView: UIWebView!
     @IBOutlet weak var loadingViewCont: UIView!
@@ -60,6 +61,8 @@ class Schedule_ScrapeViewController: UIViewController {
         UIView.transition(with: background, duration: 1.5, options: [.transitionCrossDissolve], animations: {
             self.background.firstColor = self.colorArray[self.currentColorArrayIndex].color1
             self.background.secondColor = self.colorArray[self.currentColorArrayIndex].color2
+            self.waitBackground.firstColor = self.colorArray[self.currentColorArrayIndex].color1
+            self.waitBackground.secondColor = self.colorArray[self.currentColorArrayIndex].color2
         }) { (success) in
             self.transitionToColors()
         }

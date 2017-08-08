@@ -8,9 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		B00BA25E1F2ADE87001E688C /* pulltorefresharrow.png in Resources */ = {isa = PBXBuildFile; fileRef = B00BA25D1F2ADE87001E688C /* pulltorefresharrow.png */; };
+		B00BA2611F2AF10E001E688C /* week2TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00BA2601F2AF10E001E688C /* week2TableViewCell.swift */; };
+		B01B318B1F342D0D0088CE63 /* aboutTVVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B01B318A1F342D0D0088CE63 /* aboutTVVC.swift */; };
 		B042BC7C1EE84842004E11BA /* contentVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B042BC7B1EE84842004E11BA /* contentVC.swift */; };
 		B042BC7F1EE84FBD004E11BA /* passportVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B042BC7E1EE84FBD004E11BA /* passportVC.swift */; };
 		B046EEB61ED7D1960076DFBA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B046EEB51ED7D1960076DFBA /* ViewController.swift */; };
+		B06AC6A01F31208700E9A095 /* LaunchScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B06AC69F1F31208700E9A095 /* LaunchScreenViewController.swift */; };
 		B08F62BD1EEB9722003483D9 /* aboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B08F62BC1EEB9722003483D9 /* aboutViewController.swift */; };
 		B0A2B70F1EE48DEE00BD69EF /* HomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0A2B70E1EE48DEE00BD69EF /* HomeTableViewCell.swift */; };
 		B0A2B7131EE48EA500BD69EF /* HomeScreenControllerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0A2B7121EE48EA500BD69EF /* HomeScreenControllerViewController.swift */; };
@@ -41,10 +44,14 @@
 		0A065EE0FD589747FA64CEA5 /* Pods-Partner.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Partner.release.xcconfig"; path = "Pods/Target Support Files/Pods-Partner/Pods-Partner.release.xcconfig"; sourceTree = "<group>"; };
 		73AED7AA4F7C475D2B5643F8 /* Pods_Bold.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Bold.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B00BA25D1F2ADE87001E688C /* pulltorefresharrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pulltorefresharrow.png; sourceTree = "<group>"; };
+		B00BA2601F2AF10E001E688C /* week2TableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = week2TableViewCell.swift; sourceTree = "<group>"; };
+		B01B31891F342B340088CE63 /* SF.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = SF.otf; sourceTree = "<group>"; };
+		B01B318A1F342D0D0088CE63 /* aboutTVVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = aboutTVVC.swift; sourceTree = "<group>"; };
 		B029630E1F12AB0F00DE4731 /* Bold.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Bold.entitlements; sourceTree = "<group>"; };
 		B042BC7B1EE84842004E11BA /* contentVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = contentVC.swift; sourceTree = "<group>"; };
 		B042BC7E1EE84FBD004E11BA /* passportVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = passportVC.swift; sourceTree = "<group>"; };
 		B046EEB51ED7D1960076DFBA /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		B06AC69F1F31208700E9A095 /* LaunchScreenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LaunchScreenViewController.swift; sourceTree = "<group>"; };
 		B08F62BC1EEB9722003483D9 /* aboutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = aboutViewController.swift; sourceTree = "<group>"; };
 		B0A2B70E1EE48DEE00BD69EF /* HomeTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeTableViewCell.swift; sourceTree = "<group>"; };
 		B0A2B7121EE48EA500BD69EF /* HomeScreenControllerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeScreenControllerViewController.swift; sourceTree = "<group>"; };
@@ -109,6 +116,7 @@
 			children = (
 				B0A6928A1ECBE15B005F8A8D /* ScheduleTableViewCell.swift */,
 				B0A2B70E1EE48DEE00BD69EF /* HomeTableViewCell.swift */,
+				B00BA2601F2AF10E001E688C /* week2TableViewCell.swift */,
 			);
 			name = "Cell Controllers";
 			sourceTree = "<group>";
@@ -117,11 +125,12 @@
 			isa = PBXGroup;
 			children = (
 				B08F62BC1EEB9722003483D9 /* aboutViewController.swift */,
+				B01B318A1F342D0D0088CE63 /* aboutTVVC.swift */,
 				B042BC7B1EE84842004E11BA /* contentVC.swift */,
 				B042BC7E1EE84FBD004E11BA /* passportVC.swift */,
 				B0A2B7121EE48EA500BD69EF /* HomeScreenControllerViewController.swift */,
-				B046EEB51ED7D1960076DFBA /* ViewController.swift */,
-				B0A692901ECC0B0F005F8A8D /* Schedule ScrapeViewController.swift */,
+				B0B30EC51F341B02002D0EB8 /* Settings */,
+				B0B30EC41F341AF6002D0EB8 /* Schedule */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -153,13 +162,31 @@
 				B0A2B7151EE4903100BD69EF /* Controllers */,
 				B0A692751ECBD9CD005F8A8D /* AppDelegate.swift */,
 				B0A692791ECBD9CD005F8A8D /* Main.storyboard */,
-				B0BD2D6A1F21ACBA00D21F13 /* settingsVC.swift */,
-				B0BD2D6C1F21AD0D00D21F13 /* settingstvVC.swift */,
 				B0A6927F1ECBD9CD005F8A8D /* Assets.xcassets */,
 				B0A692811ECBD9CD005F8A8D /* LaunchScreen.storyboard */,
+				B06AC69F1F31208700E9A095 /* LaunchScreenViewController.swift */,
 				B0A692841ECBD9CD005F8A8D /* Info.plist */,
+				B01B31891F342B340088CE63 /* SF.otf */,
 			);
 			path = Partner;
+			sourceTree = "<group>";
+		};
+		B0B30EC41F341AF6002D0EB8 /* Schedule */ = {
+			isa = PBXGroup;
+			children = (
+				B046EEB51ED7D1960076DFBA /* ViewController.swift */,
+				B0A692901ECC0B0F005F8A8D /* Schedule ScrapeViewController.swift */,
+			);
+			name = Schedule;
+			sourceTree = "<group>";
+		};
+		B0B30EC51F341B02002D0EB8 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				B0BD2D6A1F21ACBA00D21F13 /* settingsVC.swift */,
+				B0BD2D6C1F21AD0D00D21F13 /* settingstvVC.swift */,
+			);
+			name = Settings;
 			sourceTree = "<group>";
 		};
 		B0BD2D531F217C9400D21F13 /* DesignableX */ = {
@@ -320,9 +347,12 @@
 				B08F62BD1EEB9722003483D9 /* aboutViewController.swift in Sources */,
 				B0BD2D641F217CA500D21F13 /* UITextFieldX.swift in Sources */,
 				B0BD2D611F217CA500D21F13 /* UILabelX.swift in Sources */,
+				B01B318B1F342D0D0088CE63 /* aboutTVVC.swift in Sources */,
 				B046EEB61ED7D1960076DFBA /* ViewController.swift in Sources */,
+				B06AC6A01F31208700E9A095 /* LaunchScreenViewController.swift in Sources */,
 				B0BD2D681F217CA500D21F13 /* UIViewXRadialGradient.swift in Sources */,
 				B0BD2D631F217CA500D21F13 /* UISliderX.swift in Sources */,
+				B00BA2611F2AF10E001E688C /* week2TableViewCell.swift in Sources */,
 				B0A692911ECC0B0F005F8A8D /* Schedule ScrapeViewController.swift in Sources */,
 				B0A692761ECBD9CD005F8A8D /* AppDelegate.swift in Sources */,
 				B0BD2D661F217CA500D21F13 /* UIViewControllerX.swift in Sources */,

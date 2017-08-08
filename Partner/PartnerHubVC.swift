@@ -7,13 +7,16 @@
 //
 
 import UIKit
-import KDLoadingView
+// import KDLoadingView
 
-class contentVC: UIViewController {
+class PartnerHubVC: UIViewController {
+    //Imports
     @IBOutlet weak var background: UIViewX!
     @IBOutlet weak var webView: UIWebView!
-    @IBOutlet weak var loadingView: KDLoadingView!
-    
+//    @IBOutlet weak var loadingView: KDLoadingView!
+    //Variables
+    var partnerhub = URL(string: "https://partner.starbucks.com/")
+    var coffeepassport = URL(string: "https://passport.starbucks.com/")
     var colorArray: [(color1: UIColor, color2: UIColor)] = []
     var currentColorArrayIndex = -1
     
@@ -29,7 +32,6 @@ class contentVC: UIViewController {
         colorArray.append((color1: #colorLiteral(red: 0.6935884356, green: 0.2097109258, blue: 0.2661354244, alpha: 1), color2: #colorLiteral(red: 0.7095819712, green: 0.1697179079, blue: 0.3290259242, alpha: 1)))
         
         transitionToColors()
-        
 
         let url = URL(string: "https://partner.starbucks.com/")
         let request = URLRequest(url: url!)
@@ -38,7 +40,7 @@ class contentVC: UIViewController {
 
         // Do any additional setup after loading the view.
     }
-     func transitionToColors() {
+    func transitionToColors() {
         currentColorArrayIndex = currentColorArrayIndex == (colorArray.count - 1) ? 0 : currentColorArrayIndex + 1
         
         UIView.transition(with: background, duration: 3.2, options: [.transitionCrossDissolve], animations: {
@@ -49,11 +51,11 @@ class contentVC: UIViewController {
         }
     }
     func webViewDidStartLoad(_ : UIWebView) {
-        loadingView.startAnimating()
+//        loadingView.startAnimating()
         
     }
     func webViewDidFinishLoad(_ : UIWebView) {
-        loadingView.stopAnimating()
+//        loadingView.stopAnimating()
     }
 
     
